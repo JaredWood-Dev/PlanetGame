@@ -9,7 +9,7 @@ public class HoustonController : PlayerController
    
    public override void SpecialAbility()
    {
-      print("Singularity Breath Weapon Used!");
+      //print("Singularity Breath Weapon Used!");
       //Send Out a Ray from Houston, if it hits the ground, then launch Houston in the opposite direction,
       //with a force relative to how far away the ground was
       Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);

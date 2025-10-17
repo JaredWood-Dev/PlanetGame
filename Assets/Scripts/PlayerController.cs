@@ -61,11 +61,13 @@ public class PlayerController : MonoBehaviour
     private float _abilityCoolDownTimer = 0.0f;
     
     private Rigidbody2D _rb;
+    private Animator _an;
 
     void Start()
     {
         //Assign the Rigidbody
         _rb = GetComponent<Rigidbody2D>();
+        _an = GetComponent<Animator>();
     }
 
     //Update is where the player's inputs are handled, NOT the Physics
@@ -133,6 +135,17 @@ public class PlayerController : MonoBehaviour
             if (!onGround)
                 force *= arialMovementModifer;
             _rb.AddForce(force * dir, ForceMode2D.Force);
+            _an.SetBool("isRunning", true);
+        }
+        else
+        {
+            _an.SetBool("isRunning", false);
+            if (!onGround)
+            {
+                
+                _rb.AddForce(_rb.linearVelocity.normalized * 10, ForceMode2D.Force);
+            }
+                
         }
 
         Physics2D.queriesHitTriggers = false;
@@ -143,11 +156,16 @@ public class PlayerController : MonoBehaviour
         {
             onGround = true;
             _coyoteTimer = 0;
+            _an.SetBool("onGround", true);
         }
         else
+        {
             onGround = false;
+            _an.SetBool("onGround", false);
+        }
 
         //Calculate the force needed to jump to the desired height
+        //print(Vector2.Dot(_rb.linearVelocity, transform.up));
         float jumpForce = (jumpHeight - Vector2.Dot(_rb.linearVelocity , transform.up) / Time.fixedDeltaTime) * _rb.mass;
         jumpForce /= 2;
         //Resolve Jump Inputs

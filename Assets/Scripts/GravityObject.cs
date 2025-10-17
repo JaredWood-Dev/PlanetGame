@@ -47,8 +47,14 @@ public class GravityObject : MonoBehaviour
             //gameObject.transform.rotation = Quaternion.Euler(0, 0, (Mathf.Atan2(downDirection.y, downDirection.x) * 180 / Mathf.PI) + 90);
             var currentUp = transform.up;
             var targetUp = -downDirection;
+            
             //transform.up = -downDirection;
-            transform.up = Vector2.Lerp(currentUp, targetUp,rotationSpeed);
+            //transform.up = Vector2.Lerp(currentUp, targetUp,rotationSpeed);
+            float currentAngle = Mathf.Atan2(currentUp.y, currentUp.x) * Mathf.Rad2Deg;
+            float targetAngle = Mathf.Atan2(targetUp.y, targetUp.x) * Mathf.Rad2Deg;
+            float newAngle = Mathf.LerpAngle(currentAngle, targetAngle, rotationSpeed * Time.fixedDeltaTime);
+            transform.rotation = Quaternion.Euler(0, 0, newAngle - 90f);
+            
         }
     }
 
