@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class PlayerController : MonoBehaviour
 {
@@ -58,16 +59,18 @@ public class PlayerController : MonoBehaviour
     
     [Header("Special Ability")]
     public float abilityCoolDown = 0.2f;
-    private float _abilityCoolDownTimer = 0.0f;
+    public float abilityCoolDownTimer = 0.0f;
     
     private Rigidbody2D _rb;
     private Animator _an;
+    protected ParticleSystemController AbilitySystem;
 
     void Start()
     {
         //Assign the Rigidbody
         _rb = GetComponent<Rigidbody2D>();
         _an = GetComponent<Animator>();
+        AbilitySystem = GetComponent<ParticleSystemController>();
     }
 
     //Update is where the player's inputs are handled, NOT the Physics
@@ -75,23 +78,7 @@ public class PlayerController : MonoBehaviour
     {
         // Handle Left-Right Inputs
         direction = Input.GetAxis("Horizontal");
-        /*
-        if (Input.GetAxis("Horizontal") > 0.2)
-        {
-            direction = DirectionState.Right;
-            GetComponent<SpriteRenderer>().flipX = false;
-        }
-        else if (Input.GetAxis("Horizontal") < -0.2)
-        {
-            direction = DirectionState.Left;
-            GetComponent<SpriteRenderer>().flipX = true;
-        }
-        else
-        {
-            direction = DirectionState.Off;
-        }
-        */
-        
+       
         //Handle the Jump Inputs
         if (Input.GetButtonDown("Jump"))
         {
@@ -105,9 +92,9 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetButtonDown("Fire3"))
         {
-            if (_abilityCoolDownTimer >= abilityCoolDown)
+            if (abilityCoolDownTimer >= abilityCoolDown)
             {
-                _abilityCoolDownTimer = 0;
+                abilityCoolDownTimer = 0;
                 SpecialAbility();
             }
         }
@@ -119,7 +106,7 @@ public class PlayerController : MonoBehaviour
         //Update Timers
         _bufferTimer += Time.deltaTime;
         _coyoteTimer += Time.deltaTime;
-        _abilityCoolDownTimer += Time.deltaTime;
+        abilityCoolDownTimer += Time.deltaTime;
 
         Vector2 dir = Vector2.zero;
         //Calculate the force needed to accelerate the player to the desired speed
@@ -140,7 +127,6 @@ public class PlayerController : MonoBehaviour
         if (direction != 0)
         {
             moveSpeed = Mathf.Max(speed - Vector2.Dot(_rb.linearVelocity , dir), 0) * Mathf.Abs(direction);
-            print((speed - Vector2.Dot(_rb.linearVelocity , dir)));
             float acceleration = moveSpeed / Time.fixedDeltaTime;
             float force = acceleration * _rb.mass;
             if (!onGround)
@@ -196,6 +182,7 @@ public class PlayerController : MonoBehaviour
                 jumpBuffered = true;
                 _bufferTimer = 0.0f;
             }
+            _an.SetTrigger("jumped");
         }
         if (jumpState == KeyState.Pressed)
         {

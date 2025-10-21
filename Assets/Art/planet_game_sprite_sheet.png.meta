@@ -881,7 +881,7 @@ TextureImporter:
         width: 58
         height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -890,6 +890,138 @@ TextureImporter:
       bones: []
       spriteID: 142c2fe5b92ada04e831407baf33f1d0
       internalID: -1148842134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ability_cell
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9039e6bdcdc86c4085830c5e9786c42
+      internalID: -587066851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: breath_ability
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 18
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2d584e81ea16c64ba20d25a9d8e8fe5
+      internalID: -792599522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: houston_jump_1
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 952
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07e29a8090c2a4847904e60ed1aee7ac
+      internalID: 1740281815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: houston_jump_2
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 952
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b45b4dcbca15da546b432fdac16cb078
+      internalID: 651297889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: houston_jump_3
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 953
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d1c3bd88eb85b74cbcbe4dcf80c9580
+      internalID: 715336691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: breath_direction
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 48
+        width: 132
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f96d4f9a97bfaf44be76f0248c766d9
+      internalID: -1022859878
       vertices: []
       indices: 
       edges: []
@@ -908,8 +1040,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      ability_cell: -587066851
+      breath_ability: -792599522
+      breath_direction: -1022859878
       gravity_indicator_arrow: -1148842134
       houston_idle: -4342012808790556159
+      houston_jump_1: 1740281815
+      houston_jump_2: 651297889
+      houston_jump_3: 715336691
       houston_run_1: -5852097450725232801
       houston_run_2: -3657409503928220924
       houston_run_3: -7657231477127158502
