@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class PlayerController : MonoBehaviour
 {
@@ -29,7 +30,7 @@ public class PlayerController : MonoBehaviour
     }
     [Header("Controls")]
     public KeyState jumpState = KeyState.Off;
-    public DirectionState direction = DirectionState.Off;
+    public float direction = 0;
     
     [Header("Movement")] 
     [Tooltip("The speed that the player can accelerate to using controls.")]
@@ -58,35 +59,26 @@ public class PlayerController : MonoBehaviour
     
     [Header("Special Ability")]
     public float abilityCoolDown = 0.2f;
-    private float _abilityCoolDownTimer = 0.0f;
+    public float abilityCoolDownTimer = 0.0f;
     
     private Rigidbody2D _rb;
+    private Animator _an;
+    protected ParticleSystemController AbilitySystem;
 
     void Start()
     {
         //Assign the Rigidbody
         _rb = GetComponent<Rigidbody2D>();
+        _an = GetComponent<Animator>();
+        AbilitySystem = GetComponent<ParticleSystemController>();
     }
 
     //Update is where the player's inputs are handled, NOT the Physics
     void Update()
     {
         // Handle Left-Right Inputs
-        if (Input.GetAxis("Horizontal") > 0)
-        {
-            direction = DirectionState.Right;
-            GetComponent<SpriteRenderer>().flipX = false;
-        }
-        if (Input.GetAxis("Horizontal") < 0)
-        {
-            direction = DirectionState.Left;
-            GetComponent<SpriteRenderer>().flipX = true;
-        }
-        if (Input.GetAxis("Horizontal") == 0)
-        {
-            direction = DirectionState.Off;
-        }
-        
+        direction = Input.GetAxis("Horizontal");
+       
         //Handle the Jump Inputs
         if (Input.GetButtonDown("Jump"))
         {
@@ -100,9 +92,9 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetButtonDown("Fire3"))
         {
-            if (_abilityCoolDownTimer >= abilityCoolDown)
+            if (abilityCoolDownTimer >= abilityCoolDown)
             {
-                _abilityCoolDownTimer = 0;
+                abilityCoolDownTimer = 0;
                 SpecialAbility();
             }
         }
@@ -114,25 +106,42 @@ public class PlayerController : MonoBehaviour
         //Update Timers
         _bufferTimer += Time.deltaTime;
         _coyoteTimer += Time.deltaTime;
-        _abilityCoolDownTimer += Time.deltaTime;
+        abilityCoolDownTimer += Time.deltaTime;
 
         Vector2 dir = Vector2.zero;
         //Calculate the force needed to accelerate the player to the desired speed
         float moveSpeed = 0;
-        if (direction == DirectionState.Right)
-            dir = transform.right;
-        if (direction == DirectionState.Left)
-            dir = -transform.right;
-
-
-        if (direction != DirectionState.Off)
+        if (direction > 0)
         {
-            moveSpeed = (speed - Vector2.Dot(_rb.linearVelocity , dir));
+            dir = transform.right;
+            GetComponent<SpriteRenderer>().flipX = false;
+        }
+
+        if (direction < 0)
+        {
+            dir = -transform.right;
+            GetComponent<SpriteRenderer>().flipX = true;
+        }
+
+
+        if (direction != 0)
+        {
+            moveSpeed = Mathf.Max(speed - Vector2.Dot(_rb.linearVelocity , dir), 0) * Mathf.Abs(direction);
             float acceleration = moveSpeed / Time.fixedDeltaTime;
             float force = acceleration * _rb.mass;
             if (!onGround)
                 force *= arialMovementModifer;
             _rb.AddForce(force * dir, ForceMode2D.Force);
+            _an.SetBool("isRunning", true);
+        }
+        else
+        {
+            _an.SetBool("isRunning", false);
+            if (!onGround)
+            {
+                _rb.AddForce(-_rb.linearVelocity.normalized * 100, ForceMode2D.Force);
+            }
+                
         }
 
         Physics2D.queriesHitTriggers = false;
@@ -143,12 +152,19 @@ public class PlayerController : MonoBehaviour
         {
             onGround = true;
             _coyoteTimer = 0;
+            _an.SetBool("onGround", true);
         }
         else
+        {
             onGround = false;
+            _an.SetBool("onGround", false);
+        }
 
         //Calculate the force needed to jump to the desired height
-        float jumpForce = (jumpHeight - Vector2.Dot(_rb.linearVelocity , transform.up) / Time.fixedDeltaTime) * _rb.mass;
+        //print(Vector2.Dot(_rb.linearVelocity, transform.up));
+        float currentVelocity = Vector2.Dot(_rb.linearVelocity, transform.up);
+        currentVelocity = Mathf.Max(currentVelocity, 0f);
+        float jumpForce = (jumpHeight - 0/ Time.fixedDeltaTime) * _rb.mass;
         jumpForce /= 2;
         //Resolve Jump Inputs
         if (jumpState == KeyState.Down)
@@ -156,12 +172,17 @@ public class PlayerController : MonoBehaviour
             //When the Jump Key is Pressed
             jumpState = KeyState.Pressed;
             if (onGround || _coyoteTimer <= coyoteTime)
+            {
+                ZeroUpwardVelocity();
                 _rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
+            }
+
             if (!onGround)
             {
                 jumpBuffered = true;
                 _bufferTimer = 0.0f;
             }
+            _an.SetTrigger("jumped");
         }
         if (jumpState == KeyState.Pressed)
         {
@@ -171,7 +192,6 @@ public class PlayerController : MonoBehaviour
         {
             //When the Jump Key is Released
             jumpState = KeyState.Off;
-            
             
             //If we are going up and release, half the upward velocity
             if ((_rb.linearVelocity * transform.up).y > 0)
@@ -183,7 +203,10 @@ public class PlayerController : MonoBehaviour
         {
             if (jumpBuffered && _bufferTimer <= jumpBufferTime)
             {
+                ZeroUpwardVelocity();
+                
                 _rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
+                print("jumped with " + (transform.up * jumpForce));
                 _bufferTimer = 0;
             }
             jumpBuffered = false;
@@ -193,5 +216,19 @@ public class PlayerController : MonoBehaviour
     public virtual void SpecialAbility()
     {
         print("Special Ability Used!");
+    }
+
+    private void ZeroUpwardVelocity()
+    {
+        //Get velocity
+        Vector2 velocity = _rb.linearVelocity;
+        //convert to local frame of reference
+        velocity *= transform.up;
+        //zero out y
+        velocity.y = 0;
+        //convert to world frame of reference
+        velocity *= Vector2.up;
+        //set the velocity
+        _rb.linearVelocity = velocity;
     }
 }
