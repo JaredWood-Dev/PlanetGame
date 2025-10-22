@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -60,6 +61,9 @@ public class PlayerController : MonoBehaviour
     [Header("Special Ability")]
     public float abilityCoolDown = 0.2f;
     public float abilityCoolDownTimer = 0.0f;
+    
+    [Header("Attributes")]
+    public CharacterAttributes attributes;
     
     private Rigidbody2D _rb;
     private Animator _an;
@@ -230,5 +234,25 @@ public class PlayerController : MonoBehaviour
         velocity *= Vector2.up;
         //set the velocity
         _rb.linearVelocity = velocity;
+    }
+
+    void OnEnable()
+    {
+        EventManager.UpdateStats += UpdateStats;
+    }
+
+    void OnDisable()
+    {
+        EventManager.UpdateStats -= UpdateStats;
+    }
+
+    public void UpdateStats(Enums.Attributes stat, float value)
+    {
+        switch (stat)
+        {
+            case Enums.Attributes.MovementSpeed: speed = value; break;
+            case Enums.Attributes.JumpHeight: jumpHeight = value; break;
+            case Enums.Attributes.AbilityCoolDown: abilityCoolDown = value; break;
+        }
     }
 }

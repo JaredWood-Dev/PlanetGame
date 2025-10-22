@@ -1013,7 +1013,7 @@ TextureImporter:
         width: 132
         height: 34
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1022,6 +1022,116 @@ TextureImporter:
       bones: []
       spriteID: 0f96d4f9a97bfaf44be76f0248c766d9
       internalID: -1022859878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy_cell
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 984
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0b85b007fe43404b8c9e81d9ee2414f
+      internalID: -1688610678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: titanium_plating
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 985
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 679ae299d76ce73448e0818910d5025b
+      internalID: 1648554950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gravity_boot
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 969
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f97364706d8fd54495c246733ec85b2
+      internalID: 2033612557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: contained_singularity
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 968
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47d13216d21422d4a88224831f6e3e05
+      internalID: 2120732482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: missing_image
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 986
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1af2c56737440fe4486736b9729a2657
+      internalID: -1762987011
       vertices: []
       indices: 
       edges: []
@@ -1043,6 +1153,9 @@ TextureImporter:
       ability_cell: -587066851
       breath_ability: -792599522
       breath_direction: -1022859878
+      contained_singularity: 2120732482
+      energy_cell: -1688610678
+      gravity_boot: 2033612557
       gravity_indicator_arrow: -1148842134
       houston_idle: -4342012808790556159
       houston_jump_1: 1740281815
@@ -1055,6 +1168,7 @@ TextureImporter:
       houston_run_5: 5810594165373147394
       houston_run_6: -284876861174309579
       houston_run_7: -3895683444878920944
+      missing_image: -1762987011
       planet_game_sprite_sheet_0: -106200029
       planet_game_sprite_sheet_1: -1504120346
       planet_game_sprite_sheet_10: -1168345982
@@ -1080,6 +1194,7 @@ TextureImporter:
       planet_game_sprite_sheet_7: -859380221
       planet_game_sprite_sheet_8: 10881245
       planet_game_sprite_sheet_9: -726995813
+      titanium_plating: 1648554950
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
