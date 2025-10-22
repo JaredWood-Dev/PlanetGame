@@ -11,6 +11,7 @@ public class CharacterAttributes : MonoBehaviour
     public Dictionary<Enums.Attributes, float> Attributes = new Dictionary<Enums.Attributes, float>();
 
     private PlayerController _plrController;
+    private Health _plrHealth;
 
     void Awake()
     {
@@ -27,6 +28,13 @@ public class CharacterAttributes : MonoBehaviour
             Attributes[Enums.Attributes.MovementSpeed] = _plrController.speed;
             Attributes[Enums.Attributes.JumpHeight] = _plrController.jumpHeight;
             Attributes[Enums.Attributes.AbilityCoolDown] = _plrController.abilityCoolDown;
+        }
+        _plrHealth = GetComponent<Health>();
+        if (_plrHealth != null)
+        {
+            Attributes[Enums.Attributes.MaxHealth] = _plrHealth.maxHealth;
+            Attributes[Enums.Attributes.Defense] = _plrHealth.defense;
+            Attributes[Enums.Attributes.HeathRegen] = _plrHealth.regenRate;
         }
     }
 
