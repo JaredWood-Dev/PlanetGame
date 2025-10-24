@@ -10,12 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 377a07caca1ca3248858cd917af7a65e, type: 3}
-  m_Name: GravityBoots
+  m_Name: HasteScroll
   m_EditorClassIdentifier: 
-  ItemName: Gravity Boots
-  Description: Increases Jump Height by 10%.
-  Icon: {fileID: 2033612557, guid: c16b6624a8739d246a60f004c2626f43, type: 3}
-  attributeChanges:
-  - attribute: 3
-    operation: 1
-    value: 1.1
+  ItemName: 
+  Description: 
+  Icon: {fileID: 0}
+  attributeChanges: []

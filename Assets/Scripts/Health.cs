@@ -30,14 +30,14 @@ public class Health : MonoBehaviour
         currentHealth = maxHealth;
     }
     
-    void ChangeHealth(float amount)
+    public void ChangeHealth(float amount, GameObject source = null)
     {
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         if (currentHealth <= 0)
-            KillCreature();
+            KillCreature(source);
     }
 
-    public void Damage(float amount, DamageType damageType, Vector2 knockback)
+    public void Damage(float amount, DamageType damageType, Vector2 knockback, GameObject source = null)
     {
         
         float damageAmount = Mathf.Clamp(amount - defense, 0, amount);
@@ -55,22 +55,33 @@ public class Health : MonoBehaviour
         float knockBackMultiplier = 1 - knockbackResistance;
         _rb.AddForce(knockback * knockBackMultiplier * _rb.mass, ForceMode2D.Impulse);
         
-        ChangeHealth(-damageAmount);
+        ChangeHealth(-damageAmount, source);
+        
+        if (gameObject.CompareTag("Player"))
+            EventManager.PlayerDamaged(source);
+        else
+            EventManager.EnemyDamaged(source, gameObject, damageAmount);
     }
 
-    void KillCreature()
+    void KillCreature(GameObject source = null)
     {
+        if (gameObject.CompareTag("Player"))
+            EventManager.PlayerDeath();
+        else
+            EventManager.EnemyDeath(source);
         Destroy(gameObject);
     }
     
     void OnEnable()
     {
-        EventManager.UpdateStats += UpdateStats;
+        if (gameObject.CompareTag("Player"))
+            EventManager.UpdateStats += UpdateStats;
     }
 
     void OnDisable()
     {
-        EventManager.UpdateStats -= UpdateStats;
+        if (gameObject.CompareTag("Player"))
+            EventManager.UpdateStats -= UpdateStats;
     }
 
     public void UpdateStats(Attributes stat, float value)

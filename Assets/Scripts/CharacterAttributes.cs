@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -36,6 +37,10 @@ public class CharacterAttributes : MonoBehaviour
             Attributes[Enums.Attributes.Defense] = _plrHealth.defense;
             Attributes[Enums.Attributes.HeathRegen] = _plrHealth.regenRate;
         }
+
+        Attributes[Enums.Attributes.AttackCoolDown] = 1f;
+        Attributes[Enums.Attributes.AttackDamage] = 10;
+        StartCoroutine(StartTimers());
     }
 
     private void OnEnable()
@@ -67,5 +72,21 @@ public class CharacterAttributes : MonoBehaviour
     public void UpdateStats()
     {
         _plrController.speed = Attributes[Enums.Attributes.MovementSpeed];
+    }
+
+    IEnumerator StartTimers()
+    {
+        while (true)
+        {
+            foreach (var item in collectedItems)
+            {
+                if (item is TimerItem timerItem)
+                    timerItem.OnTimerTick();
+                    
+                
+            }
+            
+            yield return new WaitForSeconds(Attributes[Enums.Attributes.AttackCoolDown]);
+        }
     }
 }

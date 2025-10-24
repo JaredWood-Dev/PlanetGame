@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 377a07caca1ca3248858cd917af7a65e, type: 3}
   m_Name: MiniSingularity
   m_EditorClassIdentifier: 
-  ItemName: 
-  Description: 
-  Icon: {fileID: 0}
-  attributeChanges: []
+  ItemName: Minature Singularity
+  Description: Reduces Ability Cooldown by 10%.
+  Icon: {fileID: 2120732482, guid: c16b6624a8739d246a60f004c2626f43, type: 3}
+  attributeChanges:
+  - attribute: 5
+    operation: 1
+    value: 0.9

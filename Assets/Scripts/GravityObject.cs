@@ -10,11 +10,10 @@ public class GravityObject : MonoBehaviour
      */
 
     public Vector2 downDirection;
-    public float gravity;
+    public float gravity = 64;
     public GameObject gravityObject;
     public GravityType gravityType;
-    public float rotationSpeed = 0.25f;
-    
+    public float rotationSpeed = 10;
     public List<Collider2D> gravityColliders;
     
     private Rigidbody2D _rb;

@@ -15,6 +15,7 @@ MonoBehaviour:
   ItemName: Energy Cell
   Description: Increases speed by 10%
   Icon: {fileID: -1688610678, guid: c16b6624a8739d246a60f004c2626f43, type: 3}
-  Attribute: 2
-  Operation: 1
-  Value: 1.1
+  attributeChanges:
+  - attribute: 2
+    operation: 1
+    value: 1.1

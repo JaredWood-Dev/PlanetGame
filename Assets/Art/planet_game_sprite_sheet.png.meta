@@ -1123,7 +1123,7 @@ TextureImporter:
         width: 12
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1132,6 +1132,72 @@ TextureImporter:
       bones: []
       spriteID: 1af2c56737440fe4486736b9729a2657
       internalID: -1762987011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vampire_gauntlet
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 955
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7465878394b06c643b94756ad48267e2
+      internalID: 1197378568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arcane_wand
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 954
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afda3eb379712b541b1511e4fd7f371b
+      internalID: 1024868431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: haste_scroll
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 969
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ac1b972683d107409b7bd95586ff9a7
+      internalID: 861530288
       vertices: []
       indices: 
       edges: []
@@ -1151,12 +1217,14 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       ability_cell: -587066851
+      arcane_wand: 1024868431
       breath_ability: -792599522
       breath_direction: -1022859878
       contained_singularity: 2120732482
       energy_cell: -1688610678
       gravity_boot: 2033612557
       gravity_indicator_arrow: -1148842134
+      haste_scroll: 861530288
       houston_idle: -4342012808790556159
       houston_jump_1: 1740281815
       houston_jump_2: 651297889
@@ -1195,6 +1263,7 @@ TextureImporter:
       planet_game_sprite_sheet_8: 10881245
       planet_game_sprite_sheet_9: -726995813
       titanium_plating: 1648554950
+      vampire_gauntlet: 1197378568
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
