@@ -74,7 +74,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 8
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -1189,7 +1189,7 @@ TextureImporter:
         width: 13
         height: 13
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1198,6 +1198,50 @@ TextureImporter:
       bones: []
       spriteID: 7ac1b972683d107409b7bd95586ff9a7
       internalID: 861530288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chest
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 984
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d502fba5df756b948adf14718b4d2a43
+      internalID: -379523820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: open_chest
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 968
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c811d647273561549a42198c39b6007d
+      internalID: 401272608
       vertices: []
       indices: 
       edges: []
@@ -1220,6 +1264,7 @@ TextureImporter:
       arcane_wand: 1024868431
       breath_ability: -792599522
       breath_direction: -1022859878
+      chest: -379523820
       contained_singularity: 2120732482
       energy_cell: -1688610678
       gravity_boot: 2033612557
@@ -1237,6 +1282,7 @@ TextureImporter:
       houston_run_6: -284876861174309579
       houston_run_7: -3895683444878920944
       missing_image: -1762987011
+      open_chest: 401272608
       planet_game_sprite_sheet_0: -106200029
       planet_game_sprite_sheet_1: -1504120346
       planet_game_sprite_sheet_10: -1168345982
