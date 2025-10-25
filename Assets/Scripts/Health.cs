@@ -63,6 +63,15 @@ public class Health : MonoBehaviour
             EventManager.EnemyDamaged(source, gameObject, damageAmount);
     }
 
+    public void Heal(float amount)
+    {
+        
+        ChangeHealth(amount);
+        
+        if (gameObject.CompareTag("Player"))
+            EventManager.PlayerHealed(gameObject, amount);
+    }
+
     void KillCreature(GameObject source = null)
     {
         if (gameObject.CompareTag("Player"))

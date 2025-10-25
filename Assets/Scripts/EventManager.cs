@@ -13,6 +13,7 @@ public class EventManager : MonoBehaviour
     public static event Action OnPlayerDied;
     public static event Action<GameObject, GameObject, float> OnEnemyHit;
     public static event Action<GameObject> OnPlayerHit;
+    public static event Action<GameObject, float> OnPlayerHealed;
 
     public static void ItemCollected(Item item)
     {
@@ -42,5 +43,10 @@ public class EventManager : MonoBehaviour
     public static void PlayerDamaged(GameObject source = null)
     {
         OnPlayerHit?.Invoke(source);
+    }
+
+    public static void PlayerHealed(GameObject target = null, float heal = 0)
+    {
+        OnPlayerHealed?.Invoke(target, heal);
     }
 }

@@ -35,11 +35,10 @@ public class CombatController : MonoBehaviour
         {
             SecondaryAttack();
         }
-
-        print(Input.GetAxis("Horizontal"));
+        
         if (Input.GetAxis("Horizontal") > 0)
             Dir = 1;
-        else
+        if (Input.GetAxis("Horizontal") < 0)
             Dir = -1;
 
     }
