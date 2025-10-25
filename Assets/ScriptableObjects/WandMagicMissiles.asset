@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88c264f820c484b4d9d46d8f756c52f7, type: 3}
   m_Name: WandMagicMissiles
   m_EditorClassIdentifier: 
-  ItemName: 
-  Description: 
-  Icon: {fileID: 0}
-  damageModifier: 0
-  magicMissilePrefab: {fileID: 0}
+  ItemName: Wand of Magic Missiles
+  Description: Periodically fires a homing projectile.
+  Icon: {fileID: 1024868431, guid: c16b6624a8739d246a60f004c2626f43, type: 3}
+  player: {fileID: 0}
+  damageModifier: 0.5
+  magicMissilePrefab: {fileID: 8765187760622500086, guid: 0aaab4593705bf04bba6b435794dbc37, type: 3}

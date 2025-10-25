@@ -1211,7 +1211,7 @@ TextureImporter:
         width: 16
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1233,7 +1233,7 @@ TextureImporter:
         width: 16
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1242,6 +1242,72 @@ TextureImporter:
       bones: []
       spriteID: c811d647273561549a42198c39b6007d
       internalID: 401272608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: houston_attack_1
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 936
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d5ddf6c6f5a56c458bac7de86d3bc50
+      internalID: -899598721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: houston_attack_2
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 936
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14656fed89666e04b8107e4bec4a5fda
+      internalID: -1877881508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: houston_attack_3
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 936
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8469cb8c7e497d49a2990176421a472
+      internalID: 399357353
       vertices: []
       indices: 
       edges: []
@@ -1270,6 +1336,9 @@ TextureImporter:
       gravity_boot: 2033612557
       gravity_indicator_arrow: -1148842134
       haste_scroll: 861530288
+      houston_attack_1: -899598721
+      houston_attack_2: -1877881508
+      houston_attack_3: 399357353
       houston_idle: -4342012808790556159
       houston_jump_1: 1740281815
       houston_jump_2: 651297889

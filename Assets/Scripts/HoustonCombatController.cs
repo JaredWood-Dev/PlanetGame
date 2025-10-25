@@ -13,15 +13,20 @@ public class HoustonCombatController : CombatController
 
     public override void PrimaryAttack()
     {
-        var attackRay = Physics2D.Raycast(transform.position, transform.right, attackRange, targetLayers);
-        if (attackRay.collider)
+        if (CoolDownTimer >= attackCoolDown)
         {
-            print("hit!");
-            var healthComponent = attackRay.collider.gameObject.GetComponent<Health>();
-            if (healthComponent)
+            var attackRay = Physics2D.Raycast(transform.position, transform.right * Dir, attackRange, targetLayers);
+            if (attackRay.collider)
             {
-                healthComponent.Damage(damage, DamageType.Thunder, transform.right * knockback, gameObject);
+                var healthComponent = attackRay.collider.gameObject.GetComponent<Health>();
+                if (healthComponent)
+                {
+                    healthComponent.Damage(damage, DamageType.Thunder, transform.right * knockback, gameObject);
+                }
             }
+
+            Animator.SetTrigger("attacked");
+            CoolDownTimer = 0;
         }
     }
 
