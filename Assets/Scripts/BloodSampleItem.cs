@@ -6,8 +6,13 @@ public class BloodSampleItem : EnemyDeathItem
 {
     public float ExplosionRadius;
     public LayerMask EffectedLayers;
+    public ParticleSystem ExplosionParticles;
     public override void KilledEnemy(GameObject killer, GameObject target)
     {
+        var particles = Instantiate(ExplosionParticles);
+        particles.transform.position = target.transform.position;
+        Destroy(particles, 1f);
+        
         var explosionCast = Physics2D.OverlapCircleAll(target.transform.position, ExplosionRadius, EffectedLayers);
         foreach (var hitTarget in explosionCast)
         {
@@ -20,5 +25,6 @@ public class BloodSampleItem : EnemyDeathItem
                     hitTarget.gameObject.GetComponent<Health>().Damage(5, DamageType.Force, knockbackVector, killer);
                 }
         }
+        
     }
 }
