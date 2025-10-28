@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 771896537929030071}
   - component: {fileID: 3626471506402309059}
-  - component: {fileID: 4557485326805075507}
   - component: {fileID: 4124869740947814051}
+  - component: {fileID: 6284007303060887318}
   m_Layer: 0
   m_Name: Chest
   m_TagString: Interactable
@@ -89,7 +89,30 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &4557485326805075507
+--- !u!114 &4124869740947814051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7080309062405864698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bc25c2e27df36044aa3f7ffab0e5ae5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  opened: 0
+  nullItem: {fileID: 224266287754579467, guid: 40f0d1301aae0de45a17c73485765661, type: 3}
+  itemPool:
+  - {fileID: 11400000, guid: a5e80f283dce9cd4cb09d78655c9925f, type: 2}
+  - {fileID: 11400000, guid: d323da754633a124f9eedb3d207f6360, type: 2}
+  - {fileID: 11400000, guid: 60c8ed59573ec084a975ed8915b3b75f, type: 2}
+  - {fileID: 11400000, guid: 949a559cf170bf542855f5c793273c8d, type: 2}
+  - {fileID: 11400000, guid: f4ff0ed98e443744cbdc797f6aa9c798, type: 2}
+  - {fileID: 11400000, guid: 33cc327158fb80146937443a94c04d07, type: 2}
+  - {fileID: 11400000, guid: 5e710349ffeff5147bc248c12592b790, type: 2}
+  openImage: {fileID: 401272608, guid: c16b6624a8739d246a60f004c2626f43, type: 3}
+--- !u!61 &6284007303060887318
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -123,10 +146,10 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.9375}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0}
     oldSize: {x: 2, y: 1.875}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
@@ -135,26 +158,3 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2, y: 1.875}
   m_EdgeRadius: 0
---- !u!114 &4124869740947814051
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7080309062405864698}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bc25c2e27df36044aa3f7ffab0e5ae5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  opened: 0
-  nullItem: {fileID: 224266287754579467, guid: 40f0d1301aae0de45a17c73485765661, type: 3}
-  itemPool:
-  - {fileID: 11400000, guid: a5e80f283dce9cd4cb09d78655c9925f, type: 2}
-  - {fileID: 11400000, guid: d323da754633a124f9eedb3d207f6360, type: 2}
-  - {fileID: 11400000, guid: 60c8ed59573ec084a975ed8915b3b75f, type: 2}
-  - {fileID: 11400000, guid: 949a559cf170bf542855f5c793273c8d, type: 2}
-  - {fileID: 11400000, guid: f4ff0ed98e443744cbdc797f6aa9c798, type: 2}
-  - {fileID: 11400000, guid: 33cc327158fb80146937443a94c04d07, type: 2}
-  - {fileID: 11400000, guid: 5e710349ffeff5147bc248c12592b790, type: 2}
-  openImage: {fileID: 401272608, guid: c16b6624a8739d246a60f004c2626f43, type: 3}

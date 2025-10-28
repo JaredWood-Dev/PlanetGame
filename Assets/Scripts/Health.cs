@@ -77,7 +77,7 @@ public class Health : MonoBehaviour
         if (gameObject.CompareTag("Player"))
             EventManager.PlayerDeath();
         else
-            EventManager.EnemyDeath(source);
+            EventManager.EnemyDeath(source, gameObject);
         Destroy(gameObject);
     }
     

@@ -8,7 +8,7 @@ public class TimerItem : Item
     /*
      * A timer item activates on a specific interval.
      */
-    public GameObject player;
+    protected GameObject player;
 
     public override void OnPickUp(CharacterAttributes attributes)
     {

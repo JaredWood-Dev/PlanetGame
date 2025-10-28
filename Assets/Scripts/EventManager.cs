@@ -9,7 +9,7 @@ public class EventManager : MonoBehaviour
     
     public static event Action<Item> OnItemPickUp;
     public static Action<Enums.Attributes, float> UpdateStats;
-    public static event Action<GameObject> OnEnemyDied;
+    public static event Action<GameObject, GameObject> OnEnemyDied;
     public static event Action OnPlayerDied;
     public static event Action<GameObject, GameObject, float> OnEnemyHit;
     public static event Action<GameObject> OnPlayerHit;
@@ -30,9 +30,9 @@ public class EventManager : MonoBehaviour
         OnPlayerDied?.Invoke();
     }
 
-    public static void EnemyDeath(GameObject killer)
+    public static void EnemyDeath(GameObject killer, GameObject target)
     {
-        OnEnemyDied?.Invoke(killer);
+        OnEnemyDied?.Invoke(killer, target);
     }
 
     public static void EnemyDamaged(GameObject source = null, GameObject target = null, float damage = 0)

@@ -1210,8 +1210,8 @@ TextureImporter:
         y: 984
         width: 16
         height: 15
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1232,8 +1232,8 @@ TextureImporter:
         y: 968
         width: 16
         height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1255,7 +1255,7 @@ TextureImporter:
         width: 11
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1277,7 +1277,7 @@ TextureImporter:
         width: 11
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1299,7 +1299,7 @@ TextureImporter:
         width: 13
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1308,6 +1308,28 @@ TextureImporter:
       bones: []
       spriteID: e8469cb8c7e497d49a2990176421a472
       internalID: 399357353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: volitile_blood_sample
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 954
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0de8e9deb14063b40bed3b5ee01641b1
+      internalID: 1528945597
       vertices: []
       indices: 
       edges: []
@@ -1379,6 +1401,7 @@ TextureImporter:
       planet_game_sprite_sheet_9: -726995813
       titanium_plating: 1648554950
       vampire_gauntlet: 1197378568
+      volitile_blood_sample: 1528945597
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
