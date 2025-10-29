@@ -9,15 +9,15 @@ public class InventoryDisplay : MonoBehaviour
 
     void OnEnable()
     {
-        EventManager.OnItemPickUp += OnPickUp;
+        EventManager.OnItemChanged += OnChanged;
     }
 
     void OnDisable()
     {
-        EventManager.OnItemPickUp -= OnPickUp;
+        EventManager.OnItemChanged -= OnChanged;
     }
 
-    void OnPickUp(Item item)
+    void OnChanged(bool n)
     {
         var children = gameObject.GetComponentsInChildren<Transform>();
         foreach (var child in children)

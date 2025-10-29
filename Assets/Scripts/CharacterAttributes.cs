@@ -62,6 +62,7 @@ public class CharacterAttributes : MonoBehaviour
         else
             collectedItems.Add(item, 1);
         UpdateStats();
+        EventManager.ItemChanged();
     }
 
     public void RemoveItem(Item item)
@@ -72,6 +73,7 @@ public class CharacterAttributes : MonoBehaviour
         else
             collectedItems.Remove(item);
         UpdateStats();
+        EventManager.ItemChanged();
     }
 
     //Handles updating all the attributes this script handles.

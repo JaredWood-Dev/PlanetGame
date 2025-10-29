@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EventManager : MonoBehaviour
@@ -14,6 +15,7 @@ public class EventManager : MonoBehaviour
     public static event Action<GameObject, GameObject, float> OnEnemyHit;
     public static event Action<GameObject> OnPlayerHit;
     public static event Action<GameObject, float> OnPlayerHealed;
+    public static event Action<bool> OnItemChanged;
 
     public static void ItemCollected(Item item)
     {
@@ -48,5 +50,10 @@ public class EventManager : MonoBehaviour
     public static void PlayerHealed(GameObject target = null, float heal = 0)
     {
         OnPlayerHealed?.Invoke(target, heal);
+    }
+
+    public static void ItemChanged(bool s = false)
+    {
+        OnItemChanged?.Invoke(s);
     }
 }
