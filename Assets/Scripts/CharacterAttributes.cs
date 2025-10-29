@@ -6,7 +6,7 @@ using UnityEngine;
 public class CharacterAttributes : MonoBehaviour
 {
     [Header("Inventory")]
-    public List<Item> collectedItems = new List<Item>();
+    public Dictionary<Item, int> collectedItems = new Dictionary<Item, int>();
 
     [Header("Attributes")] 
     public Dictionary<Enums.Attributes, float> Attributes = new Dictionary<Enums.Attributes, float>();
@@ -57,15 +57,21 @@ public class CharacterAttributes : MonoBehaviour
     public void CollectItem(Item item)
     {
         item.OnPickUp(this);
+        if (collectedItems.ContainsKey(item))
+            collectedItems[item]++;
+        else
+            collectedItems.Add(item, 1);
         UpdateStats();
-        collectedItems.Add(item);
     }
 
     public void RemoveItem(Item item)
     {
         item.OnRemoved(this);
+        if (collectedItems.ContainsKey(item))
+            collectedItems[item]--;
+        else
+            collectedItems.Remove(item);
         UpdateStats();
-        collectedItems.Remove(item);
     }
 
     //Handles updating all the attributes this script handles.
@@ -80,13 +86,21 @@ public class CharacterAttributes : MonoBehaviour
         {
             foreach (var item in collectedItems)
             {
-                if (item is TimerItem timerItem)
+                if (item.Key is TimerItem timerItem)
                     timerItem.OnTimerTick();
-                    
                 
             }
             
             yield return new WaitForSeconds(Attributes[Enums.Attributes.AttackCoolDown]);
         }
+    }
+
+    void DisplayDictionary()
+    {
+        string output = "";
+        foreach (var item in collectedItems)
+            output += $"{item.Key}: {item.Value}\n";
+        
+        print(output);
     }
 }

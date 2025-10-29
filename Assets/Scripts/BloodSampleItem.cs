@@ -11,7 +11,7 @@ public class BloodSampleItem : EnemyDeathItem
     {
         var particles = Instantiate(ExplosionParticles);
         particles.transform.position = target.transform.position;
-        Destroy(particles, 1f);
+        Destroy(particles, 0.5f);
         
         var explosionCast = Physics2D.OverlapCircleAll(target.transform.position, ExplosionRadius, EffectedLayers);
         foreach (var hitTarget in explosionCast)
