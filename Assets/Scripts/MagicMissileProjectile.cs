@@ -31,7 +31,7 @@ public class MagicMissileProjectile : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
-            other.gameObject.GetComponent<Health>().Damage(5, DamageType.Force, transform.right * 5, shooter);
+            other.gameObject.GetComponent<Health>().Damage(missileDamage, DamageType.Force, transform.right * 5, shooter);
             Destroy(gameObject);
         }
     }

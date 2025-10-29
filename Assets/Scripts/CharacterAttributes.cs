@@ -18,10 +18,7 @@ public class CharacterAttributes : MonoBehaviour
     {
         Attributes[Enums.Attributes.MaxHealth] = 100f;
         Attributes[Enums.Attributes.MovementSpeed] = 100f;
-    }
-    
-    void Start()
-    {
+        
         //Get Initial Values from Controller
         _plrController = GetComponent<PlayerController>();
         if (_plrController != null)
@@ -40,6 +37,10 @@ public class CharacterAttributes : MonoBehaviour
 
         Attributes[Enums.Attributes.AttackCoolDown] = 1f;
         Attributes[Enums.Attributes.AttackDamage] = 10;
+    }
+    
+    void Start()
+    {
         StartCoroutine(StartTimers());
     }
 
@@ -57,6 +58,7 @@ public class CharacterAttributes : MonoBehaviour
     public void CollectItem(Item item)
     {
         item.OnPickUp(this);
+        item.Owner = this;
         if (collectedItems.ContainsKey(item))
             collectedItems[item]++;
         else
