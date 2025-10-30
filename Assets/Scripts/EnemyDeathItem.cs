@@ -5,15 +5,26 @@ using UnityEngine;
 public class EnemyDeathItem : Item
 {
     protected CharacterAttributes PlayerAttributes;
+    protected static bool IsSubbed = false;
+    protected static int StackCount = 0;
     public override void OnPickUp(CharacterAttributes attributes)
     {
         PlayerAttributes = attributes;
-        EventManager.OnEnemyDied += KilledEnemy;
+        StackCount++;
+        if (!IsSubbed)
+        {
+            EventManager.OnEnemyDied += KilledEnemy;
+        }
     }
 
     public override void OnRemoved(CharacterAttributes attributes)
     {
-        EventManager.OnEnemyDied -= KilledEnemy;
+        StackCount--;
+        if (StackCount <= 0)
+        {
+            EventManager.OnEnemyDied -= KilledEnemy;
+            IsSubbed = false;
+        }
     }
 
     public virtual void KilledEnemy(GameObject killer, GameObject target)
