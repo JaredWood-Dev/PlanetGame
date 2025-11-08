@@ -9,12 +9,14 @@ public class GameManager : MonoBehaviour
     void OnEnable()
     {
         EventManager.OnEnemyHit += CreatureHit;
+        EventManager.OnPlayerHit += CreatureHit;
         EventManager.OnPlayerHealed += PlayerHealed;
     }
 
     void OnDisable()
     {
         EventManager.OnEnemyHit -= CreatureHit;
+        EventManager.OnPlayerHit -= CreatureHit;
         EventManager.OnPlayerHealed -= PlayerHealed;
     }
 

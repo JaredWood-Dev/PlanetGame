@@ -53,12 +53,12 @@ public class Health : MonoBehaviour
                 damageAmount = 0;
 
         float knockBackMultiplier = 1 - knockbackResistance;
-        _rb.AddForce(knockback * knockBackMultiplier * _rb.mass, ForceMode2D.Impulse);
+        _rb.AddForce(knockback * (knockBackMultiplier * _rb.mass), ForceMode2D.Impulse);
         
         ChangeHealth(-damageAmount, source);
         
         if (gameObject.CompareTag("Player"))
-            EventManager.PlayerDamaged(source);
+            EventManager.PlayerDamaged(source, gameObject, damageAmount);
         else
             EventManager.EnemyDamaged(source, gameObject, damageAmount);
     }
