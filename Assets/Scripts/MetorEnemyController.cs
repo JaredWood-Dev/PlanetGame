@@ -144,6 +144,7 @@ public class MetorEnemyController : MonoBehaviour
         {
             trigger.GetComponent<DamageTrigger>().canCollide = false;
             meteorStatus = Status.Stun;
+            _rb.linearVelocity = Vector2.zero;
         }
     }
 }

@@ -21,7 +21,17 @@ public class MagicMissileProjectile : MonoBehaviour
 
         if (enemies.Length > 0)
         {
-            var targetPos = enemies[0].transform.position;
+            float dist = float.MaxValue;
+            int smallestDistance = 0;
+            for (int i = 0; i < enemies.Length; i++)
+            {
+                if (Vector2.Distance(transform.position, enemies[i].transform.position) < dist)
+                {
+                    dist = Vector2.Distance(transform.position, enemies[i].transform.position);
+                    smallestDistance = i;
+                }
+            }
+            var targetPos = enemies[smallestDistance].transform.position;
 
             transform.position = Vector3.MoveTowards(transform.position, targetPos, missileSpeed * Time.deltaTime);
         }
@@ -31,7 +41,7 @@ public class MagicMissileProjectile : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
-            other.gameObject.GetComponent<Health>().Damage(missileDamage, DamageType.Force, transform.right * 5, shooter);
+            other.gameObject.GetComponent<Health>().Damage(missileDamage, DamageType.Force, transform.right, shooter);
             Destroy(gameObject);
         }
     }
