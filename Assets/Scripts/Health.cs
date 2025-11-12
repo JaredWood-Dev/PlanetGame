@@ -23,11 +23,16 @@ public class Health : MonoBehaviour
     public List<Enums.DamageType> immunities;
 
     private Rigidbody2D _rb;
+    private SpriteRenderer _sr;
+    private Material _defaultMaterial;
+    public Material spriteFlash;
 
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth;
+        _sr = GetComponent<SpriteRenderer>();
+        _defaultMaterial = _sr.material;
     }
     
     public void ChangeHealth(float amount, GameObject source = null)
@@ -61,6 +66,9 @@ public class Health : MonoBehaviour
             EventManager.PlayerDamaged(source, gameObject, damageAmount);
         else
             EventManager.EnemyDamaged(source, gameObject, damageAmount);
+        
+        _sr.material = spriteFlash;
+        Invoke("ResetMaterial", 0.1f);
     }
 
     public void Heal(float amount)
@@ -102,5 +110,10 @@ public class Health : MonoBehaviour
             case Attributes.Defense: defense = value;break;
             case Attributes.HeathRegen: regenRate = value;break;
         }
+    }
+
+    void ResetMaterial()
+    {
+        _sr.material = _defaultMaterial;
     }
 }

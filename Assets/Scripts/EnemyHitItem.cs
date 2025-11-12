@@ -4,14 +4,28 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "EnemyHitItem", menuName = "Scriptable Objects/EnemyHitItem")]
 public class EnemyHitItem : Item
 {
+    protected CharacterAttributes PlayerAttributes;
+    protected static bool IsSubbed = false;
+    protected static int StackCount = 0;
     public override void OnPickUp(CharacterAttributes attributes)
     {
-        EventManager.OnEnemyHit += HitEnemy;
+        PlayerAttributes = attributes;
+        StackCount++;
+        if (!IsSubbed)
+        {
+            IsSubbed = true;
+            EventManager.OnEnemyHit += HitEnemy;
+        }
     }
 
     public override void OnRemoved(CharacterAttributes attributes)
     {
-        EventManager.OnEnemyHit -= HitEnemy;
+        StackCount--;
+        if (StackCount <= 0)
+        {
+            EventManager.OnEnemyHit -= HitEnemy;
+            IsSubbed = false;
+        }
     }
 
     public virtual void HitEnemy(GameObject source, GameObject target, float amount)

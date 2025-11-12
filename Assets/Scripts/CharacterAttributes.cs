@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class CharacterAttributes : MonoBehaviour
@@ -13,6 +14,7 @@ public class CharacterAttributes : MonoBehaviour
 
     private PlayerController _plrController;
     private Health _plrHealth;
+    private CombatController _plrCombatController;
 
     void Awake()
     {
@@ -34,9 +36,16 @@ public class CharacterAttributes : MonoBehaviour
             Attributes[Enums.Attributes.Defense] = _plrHealth.defense;
             Attributes[Enums.Attributes.HeathRegen] = _plrHealth.regenRate;
         }
-
-        Attributes[Enums.Attributes.AttackCoolDown] = 1f;
-        Attributes[Enums.Attributes.AttackDamage] = 10;
+        _plrCombatController = GetComponent<CombatController>();
+        if (_plrCombatController != null)
+        {
+            Attributes[Enums.Attributes.AttackCoolDown] = _plrCombatController.attackCoolDown;
+            Attributes[Enums.Attributes.AttackDamage] = _plrCombatController.damage;
+            Attributes[Enums.Attributes.Knockback] = _plrCombatController.knockback;
+            Attributes[Enums.Attributes.CritChance] = _plrCombatController.critChance;
+            Attributes[Enums.Attributes.CritDamage] = _plrCombatController.critDamage;
+        }
+        
     }
     
     void Start()

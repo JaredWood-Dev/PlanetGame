@@ -21,6 +21,7 @@ public class DamageTrigger : MonoBehaviour
                 canCollide = false;
                 other.gameObject.GetComponent<Health>().Damage(damage, DamageType.Bludgeoning, other.gameObject.transform.up * 10, parent);
                 parent.GetComponent<MetorEnemyController>().meteorStatus = MetorEnemyController.Status.Stun;
+                parent.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
             }
         }
     }

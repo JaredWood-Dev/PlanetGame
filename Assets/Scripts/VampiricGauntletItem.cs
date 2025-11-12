@@ -6,6 +6,6 @@ public class VampiricGauntletItem : EnemyHitItem
     public float lifeStealPercentage;
     public override void HitEnemy(GameObject source, GameObject target, float damage)
     {
-        source.GetComponent<Health>().Heal(damage * lifeStealPercentage);
+        source.GetComponent<Health>().Heal(damage * lifeStealPercentage * StackCount);
     }
 }

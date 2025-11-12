@@ -66,10 +66,7 @@ public class MetorEnemyController : MonoBehaviour
                 break;
             case Status.Dash:
                 Dash(_tempPos);
-                if (Vector2.Distance(transform.position, _tempPos) < 0.5f)
-                {
-                    meteorStatus = Status.Stun;
-                }
+                Invoke("Stunned", 1f);
                 break;
             case Status.Stun:
                 Stunned();
@@ -79,7 +76,14 @@ public class MetorEnemyController : MonoBehaviour
 
     void FixedUpdate()
     {
-        _timeOutTimer += Time.deltaTime;
+        if (Vector2.Distance(transform.position, player.transform.position) < attackDistance + 1)
+        {
+            _timeOutTimer += Time.deltaTime;
+        }
+        else
+        {
+            _timeOutTimer = 0f;
+        }
     }
     
     //Meteor chooses a random spot to travel to in the world
@@ -129,6 +133,7 @@ public class MetorEnemyController : MonoBehaviour
     //While stunned, the meteorite can't do anything
     void Stunned()
     {
+        meteorStatus = Status.Stun;
         trigger.GetComponent<DamageTrigger>().canCollide = false;
         Invoke("Recover", 5f);
     }

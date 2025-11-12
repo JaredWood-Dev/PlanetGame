@@ -12,7 +12,8 @@
         AttackDamage,
         Defense,
         CritChance,
-        CritDamage
+        CritDamage,
+        Knockback,
     }
 
     public enum Operation

@@ -15,13 +15,15 @@ public class HoustonCombatController : CombatController
     {
         if (CoolDownTimer >= attackCoolDown)
         {
-            var attackRay = Physics2D.Raycast(transform.position, transform.right * Dir, attackRange, targetLayers);
-            if (attackRay.collider)
+            var targets = Physics2D.OverlapCircleAll(transform.position + (transform.right * (attackRange * Dir)),
+                attackRange, targetLayers);
+
+            foreach (var target in targets)
             {
-                var healthComponent = attackRay.collider.gameObject.GetComponent<Health>();
-                if (healthComponent)
+                Health targetHealth = target.GetComponent<Health>();
+                if (targetHealth)
                 {
-                    healthComponent.Damage(damage, DamageType.Thunder, transform.right * knockback, gameObject);
+                    targetHealth.Damage(damage, DamageType.Thunder, transform.right * (Dir * knockback), gameObject);
                 }
             }
 
@@ -41,5 +43,11 @@ public class HoustonCombatController : CombatController
                 healthComponent.Damage(damage * 1.5f, DamageType.Thunder, transform.up * (knockback * 2.5f), gameObject);
             }
         }
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        //Gizmos.DrawWireSphere(transform.position + (transform.right * 2), attackRange);
+        Gizmos.DrawWireSphere(transform.position + (transform.right * attackRange * Dir), attackRange);
     }
 }

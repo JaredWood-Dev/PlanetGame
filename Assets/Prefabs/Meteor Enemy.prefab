@@ -190,7 +190,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 20
-  m_LinearDamping: 10
+  m_LinearDamping: 1
   m_AngularDamping: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 6200000, guid: 58a8b63b2eba3644b863032b7b3fbe1a, type: 2}
@@ -275,7 +275,7 @@ MonoBehaviour:
   wanderTarget: {x: 0, y: 0}
   timeOut: 2
   attackDistance: 5
-  followDistance: 20
+  followDistance: 100
   canCollide: 0
   dashTime: 5
   trigger: {fileID: 0}
@@ -292,7 +292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a54db7ebe42fc643a4700c939143ff2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 20
   currentHealth: 0
   regenRate: 0
   defense: 0
@@ -300,3 +300,4 @@ MonoBehaviour:
   resistances: 
   vulnerabilities: 
   immunities: 
+  spriteFlash: {fileID: 2100000, guid: 0221ceb031e520a41b0bc41458598004, type: 2}

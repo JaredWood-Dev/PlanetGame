@@ -1343,7 +1343,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1365,7 +1365,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1374,6 +1374,28 @@ TextureImporter:
       bones: []
       spriteID: 934d17bab9f5568499d37bfa0160c6ae
       internalID: -478204957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: small_meteoride_hurt
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 976
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e12bc07c6bfce01488db7199f7985601
+      internalID: 1754710503
       vertices: []
       indices: 
       edges: []
@@ -1444,6 +1466,7 @@ TextureImporter:
       planet_game_sprite_sheet_7: -859380221
       planet_game_sprite_sheet_8: 10881245
       planet_game_sprite_sheet_9: -726995813
+      small_meteoride_hurt: 1754710503
       small_meteroriod: -1591147016
       titanium_plating: 1648554950
       vampire_gauntlet: 1197378568
