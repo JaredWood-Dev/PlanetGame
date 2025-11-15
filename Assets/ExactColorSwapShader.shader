@@ -5,7 +5,7 @@ Shader "Custom/ExactColorSwap"
         _MainTex("Texture", 2D) = "white" {}
         _OriginalColor("Original Color", Color) = (1,1,1,1)
         _TargetColor("Target Color", Color) = (1,1,1,1)
-        _Tolerance("Tolerance", Range(0, 1)) = 0.001  
+        _Tolerance("Tolerance", Range(0, 5)) = 0.001  
     }
  
     SubShader

@@ -17,6 +17,8 @@ public class HoustonCombatController : CombatController
         {
             var targets = Physics2D.OverlapCircleAll(transform.position + (transform.right * (attackRange * Dir)),
                 attackRange, targetLayers);
+            
+            CoolDownTimer = 0;
 
             foreach (var target in targets)
             {
@@ -28,7 +30,7 @@ public class HoustonCombatController : CombatController
             }
 
             Animator.SetTrigger("attacked");
-            CoolDownTimer = 0;
+            
         }
     }
 

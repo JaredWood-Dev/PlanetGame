@@ -1387,7 +1387,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1396,6 +1396,28 @@ TextureImporter:
       bones: []
       spriteID: e12bc07c6bfce01488db7199f7985601
       internalID: 1754710503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: training_dummy
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 984
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3de3e26201e0c047878a8e430d38f46
+      internalID: -1877113420
       vertices: []
       indices: 
       edges: []
@@ -1469,6 +1491,7 @@ TextureImporter:
       small_meteoride_hurt: 1754710503
       small_meteroriod: -1591147016
       titanium_plating: 1648554950
+      training_dummy: -1877113420
       vampire_gauntlet: 1197378568
       volitile_blood_sample: 1528945597
   mipmapLimitGroupName: 
