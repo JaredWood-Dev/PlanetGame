@@ -45,7 +45,7 @@ public class Health : MonoBehaviour
     public void Damage(float amount, DamageType damageType, Vector2 knockback, GameObject source = null)
     {
         
-        float damageAmount = Mathf.Clamp(amount - defense, 0, amount);
+        float damageAmount = Mathf.Max(amount - defense, 0);
 
         foreach (DamageType damage in resistances)
             if (damageType == damage)

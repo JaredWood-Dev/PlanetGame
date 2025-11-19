@@ -9,12 +9,14 @@ public class GameManager : MonoBehaviour
     [Header("Timer and Difficulty")] 
     public float timer;
     public TextMeshProUGUI timerText;
+    public float difficulty;
     
     
     [Header("Damage Indicators")]
     public GameObject damageIndicator;
     public Color playerHealColor;
     public Color enemyDamageColor;
+    public Color playerDamageColor;
 
     void Start()
     {
@@ -28,6 +30,10 @@ public class GameManager : MonoBehaviour
         timer += Time.deltaTime;
         TimeSpan time = TimeSpan.FromSeconds(timer);
         timerText.text = time.ToString("hh\\:mm\\:ss\\.ff");
+
+        //TODO: REPLACE WITH MORE ELEGANT SCALING SYSTEM
+        difficulty = timer * 0.1f;
+        //difficulty = Mathf.Pow(1.1f, 0.1f * difficulty);
     }
     
     void OnEnable()
@@ -50,7 +56,10 @@ public class GameManager : MonoBehaviour
         damageIndicatorInstance.transform.position = target.transform.position + new Vector3((Random.value - 0.5f), (Random.value - 0.5f));
         damageIndicatorInstance.transform.rotation = target.transform.rotation;
         damageIndicatorInstance.GetComponent<TextMeshPro>().text = amount.ToString();
-        damageIndicatorInstance.GetComponent<TextMeshPro>().color = enemyDamageColor;
+        if (target.CompareTag("Player"))
+            damageIndicatorInstance.GetComponent<TextMeshPro>().color = playerDamageColor; 
+        else
+            damageIndicatorInstance.GetComponent<TextMeshPro>().color = enemyDamageColor;
     }
 
     void PlayerHealed(GameObject player, float amount)

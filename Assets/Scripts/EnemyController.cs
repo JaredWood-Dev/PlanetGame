@@ -1,5 +1,6 @@
 using System;
 using Enums;
+using Pathfinding;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -13,7 +14,6 @@ public class EnemyController : MonoBehaviour
     public enum EnemyState
     {
         Idle,
-        Patrol,
         Chase,
         Attack
     }
@@ -24,7 +24,15 @@ public class EnemyController : MonoBehaviour
     public Transform player;
     public float attackCooldown;
     private float _attackCoolDownTimer;
+    protected Rigidbody2D _rb;
+    protected AIPathfinding _aiPath;
 
+    void Start()
+    {
+        _rb = GetComponent<Rigidbody2D>();
+        _aiPath = GetComponent<AIPathfinding>();
+    }
+    
     private void Update()
     {
         if (player)
@@ -32,38 +40,31 @@ public class EnemyController : MonoBehaviour
             switch (currentState)
             {
                 case EnemyState.Idle:
-                    if (Vector2.Distance(player.position, transform.position) <= aggroRange * 2)
-                    {
-                        currentState = EnemyState.Patrol;
-                    }
-
-                    EnemyIdle();
-                    break;
-                case
-                    EnemyState.Patrol:
                     if (Vector2.Distance(player.position, transform.position) <= aggroRange)
                     {
                         currentState = EnemyState.Chase;
                     }
-
-                    EnemyPatrol();
+                    EnemyIdle();
                     break;
                 case EnemyState.Chase:
                     if (Vector2.Distance(player.position, transform.position) <= meleeRange)
                     {
-                        currentState = EnemyState.Attack;
+                        if (_attackCoolDownTimer > attackCooldown)
+                        {
+                            currentState = EnemyState.Attack;
+                            _attackCoolDownTimer = 0;
+                        }
                     }
-
+                    if (Vector2.Distance(player.position, transform.position) > aggroRange)
+                    {
+                        currentState = EnemyState.Idle;
+                    }
                     EnemyChase();
                     break;
                 case EnemyState.Attack:
                     EnemyAttack();
+                    currentState = EnemyState.Idle;
                     break;
-            }
-
-            if (Vector2.Distance(player.position, transform.position) > aggroRange)
-            {
-                currentState = EnemyState.Idle;
             }
         }
     }
@@ -73,30 +74,18 @@ public class EnemyController : MonoBehaviour
         _attackCoolDownTimer += Time.fixedDeltaTime;
     }
 
-    void EnemyIdle()
+    public virtual void EnemyIdle()
     {
         print("Idle");
     }
 
-    void EnemyPatrol()
-    {
-        print("Patrol");
-    }
-
-    void EnemyChase()
+    public virtual void EnemyChase()
     {
         print("Chase");
-        transform.position = Vector2.MoveTowards(transform.position, player.position, 5 * Time.fixedDeltaTime);
     }
 
-    void EnemyAttack()
+    public virtual void EnemyAttack()
     {
-        if (_attackCoolDownTimer >= attackCooldown)
-        {
-            player.GetComponent<Health>().Damage(10, DamageType.Bludgeoning,
-                -(transform.position - player.position) * 10, gameObject);
-            currentState = EnemyState.Chase;
-            _attackCoolDownTimer = 0f;
-        }
+        print("Attack!");
     }
 }

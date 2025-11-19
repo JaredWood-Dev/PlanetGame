@@ -1409,7 +1409,7 @@ TextureImporter:
         width: 12
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1418,6 +1418,160 @@ TextureImporter:
       bones: []
       spriteID: e3de3e26201e0c047878a8e430d38f46
       internalID: -1877113420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: throrn_crown
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 941
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c30db3db2581f7419fb5818bbca5045
+      internalID: 302061061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: simple_planet
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 608
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f1ba880bad3add4e8dc3cb73fdca9a4
+      internalID: 1309413803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: small_planet
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 760
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fcfd4f7f1126c149b0a5cbce77350dd
+      internalID: 291281338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gremlin_idle
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 976
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a2cf20b7280ffa4fb23f5d4354c6885
+      internalID: 252053858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gremlin_walk
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 976
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23e3b8e31c566f14aa6fa6babb15cd0b
+      internalID: 278472346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gremlin_attack_1
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 968
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dad2fee43d137544849a34f22cb7c3e
+      internalID: 1771187779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gremlin_attack_2
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 968
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23cb1df987d027544b58be79d3c64a42
+      internalID: 1451181019
       vertices: []
       indices: 
       edges: []
@@ -1445,6 +1599,10 @@ TextureImporter:
       energy_cell: -1688610678
       gravity_boot: 2033612557
       gravity_indicator_arrow: -1148842134
+      gremlin_attack_1: 1771187779
+      gremlin_attack_2: 1451181019
+      gremlin_idle: 252053858
+      gremlin_walk: 278472346
       haste_scroll: 861530288
       houston_attack_1: -899598721
       houston_attack_2: -1877881508
@@ -1488,8 +1646,11 @@ TextureImporter:
       planet_game_sprite_sheet_7: -859380221
       planet_game_sprite_sheet_8: 10881245
       planet_game_sprite_sheet_9: -726995813
+      simple_planet: 1309413803
       small_meteoride_hurt: 1754710503
       small_meteroriod: -1591147016
+      small_planet: 291281338
+      throrn_crown: 302061061
       titanium_plating: 1648554950
       training_dummy: -1877113420
       vampire_gauntlet: 1197378568

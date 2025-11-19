@@ -112,6 +112,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 33cc327158fb80146937443a94c04d07, type: 2}
   - {fileID: 11400000, guid: 5e710349ffeff5147bc248c12592b790, type: 2}
   - {fileID: 11400000, guid: ecbb7584f655c4c44b83a4bb1f90b939, type: 2}
+  - {fileID: 11400000, guid: 3580293e793485e4eb6076234f31d5ad, type: 2}
   openImage: {fileID: 401272608, guid: c16b6624a8739d246a60f004c2626f43, type: 3}
 --- !u!61 &6284007303060887318
 BoxCollider2D:

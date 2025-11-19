@@ -9,6 +9,7 @@ public class BloodSampleItem : EnemyDeathItem
     public ParticleSystem ExplosionParticles;
     public override void KilledEnemy(GameObject killer, GameObject target)
     {
+        
         var particles = Instantiate(ExplosionParticles);
         particles.transform.position = target.transform.position;
         Destroy(particles, 0.5f);

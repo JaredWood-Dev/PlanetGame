@@ -8,6 +8,8 @@ public class EnemySpawner : MonoBehaviour
     public List<GameObject> enemies;
     public float timeBetweenSpawns;
     public float spawnAmount;
+    
+    public GameManager gameManager;
 
     [Serializable]
     public struct Volume
@@ -32,6 +34,10 @@ public class EnemySpawner : MonoBehaviour
             {
                 var spawnedEnemy = Instantiate(enemy);
                 spawnedEnemy.transform.position = new Vector2(Random.Range(spawnBound.BottomLeft.x, spawnBound.TopRight.x), Random.Range(spawnBound.BottomLeft.y, spawnBound.TopRight.y));
+                var enemyHealth = spawnedEnemy.GetComponent<Health>();
+                enemyHealth.maxHealth += (1 * gameManager.difficulty);
+                var enemyComponent = spawnedEnemy.GetComponent<EnemyController>();
+                //enemyComponent.damage += (1 * (int)gameManager.difficulty);
             }
         }
     }
