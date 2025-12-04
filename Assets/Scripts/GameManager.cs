@@ -18,6 +18,12 @@ public class GameManager : MonoBehaviour
     public Color enemyDamageColor;
     public Color playerDamageColor;
 
+    [Header("Stats")] 
+    public int enemyKills;
+    public int damageDealt;
+    public int damageTaken;
+    public int healing;
+
     void Start()
     {
         timer = 0;
@@ -41,6 +47,7 @@ public class GameManager : MonoBehaviour
         EventManager.OnEnemyHit += CreatureHit;
         EventManager.OnPlayerHit += CreatureHit;
         EventManager.OnPlayerHealed += PlayerHealed;
+        EventManager.OnEnemyDied += EnemyKilled;
     }
 
     void OnDisable()
@@ -48,6 +55,7 @@ public class GameManager : MonoBehaviour
         EventManager.OnEnemyHit -= CreatureHit;
         EventManager.OnPlayerHit -= CreatureHit;
         EventManager.OnPlayerHealed -= PlayerHealed;
+        EventManager.OnEnemyDied -= EnemyKilled;
     }
 
     void CreatureHit(GameObject source, GameObject target, float amount)
@@ -57,9 +65,15 @@ public class GameManager : MonoBehaviour
         damageIndicatorInstance.transform.rotation = target.transform.rotation;
         damageIndicatorInstance.GetComponent<TextMeshPro>().text = amount.ToString();
         if (target.CompareTag("Player"))
-            damageIndicatorInstance.GetComponent<TextMeshPro>().color = playerDamageColor; 
+        {
+            damageIndicatorInstance.GetComponent<TextMeshPro>().color = playerDamageColor;
+            damageTaken += (int)amount;
+        }
         else
+        {
             damageIndicatorInstance.GetComponent<TextMeshPro>().color = enemyDamageColor;
+            damageDealt += (int)amount;
+        }
     }
 
     void PlayerHealed(GameObject player, float amount)
@@ -69,5 +83,12 @@ public class GameManager : MonoBehaviour
         damageIndicatorInstance.transform.rotation = player.transform.rotation;
         damageIndicatorInstance.GetComponent<TextMeshPro>().text = amount.ToString();
         damageIndicatorInstance.GetComponent<TextMeshPro>().color = playerHealColor;
+        
+        healing += (int)amount;
+    }
+
+    void EnemyKilled(GameObject target, GameObject killer)
+    {
+        enemyKills++;
     }
 }

@@ -8,6 +8,7 @@ public class EnemySpawner : MonoBehaviour
     public List<GameObject> enemies;
     public float timeBetweenSpawns;
     public float spawnAmount;
+    public Transform player;
     
     public GameManager gameManager;
 
@@ -37,7 +38,8 @@ public class EnemySpawner : MonoBehaviour
                 var enemyHealth = spawnedEnemy.GetComponent<Health>();
                 enemyHealth.maxHealth += (1 * gameManager.difficulty);
                 var enemyComponent = spawnedEnemy.GetComponent<EnemyController>();
-                //enemyComponent.damage += (1 * (int)gameManager.difficulty);
+                enemyComponent.player = player;
+                enemyComponent.damage += (1 * (int)gameManager.difficulty);
             }
         }
     }

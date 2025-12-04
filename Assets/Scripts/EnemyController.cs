@@ -23,6 +23,7 @@ public class EnemyController : MonoBehaviour
     public float meleeRange;
     public Transform player;
     public float attackCooldown;
+    public float damage;
     private float _attackCoolDownTimer;
     protected Rigidbody2D _rb;
     protected AIPathfinding _aiPath;

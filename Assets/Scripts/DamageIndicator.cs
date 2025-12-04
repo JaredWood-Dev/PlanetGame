@@ -15,6 +15,7 @@ public class DamageIndicator : MonoBehaviour
     void Update()
     {
         transform.position = Vector2.Lerp(_originalPos, (Vector2)transform.position + positionOffset, Time.deltaTime);
+        transform.rotation = Camera.main.transform.rotation;
     }
 
     void DestroyIndicator()

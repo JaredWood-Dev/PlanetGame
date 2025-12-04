@@ -7,6 +7,7 @@ public class HoustonController : PlayerController
    public float breathDistance;
    public float breathHeight;
    public float breathForce;
+   public float breathDamageMultiplier; //This is so its still based of damage, which can be increased with items
    private HoustonCombatController _hcc;
    protected float Rot = 0;
    
@@ -41,7 +42,7 @@ public class HoustonController : PlayerController
       {
          var health = col.gameObject.GetComponent<Health>();
          if (health)
-            health.Damage(_hcc.damage * 2, DamageType.Force, -(gameObject.transform.position - col.gameObject.transform.position).normalized * (breathForce * 0.01f), gameObject);
+            health.Damage(_hcc.damage * breathDamageMultiplier, DamageType.Force, -(gameObject.transform.position - col.gameObject.transform.position).normalized * (breathForce * 0.01f), gameObject);
       }
    }
 
