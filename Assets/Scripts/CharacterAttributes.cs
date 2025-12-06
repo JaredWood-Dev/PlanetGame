@@ -61,6 +61,17 @@ public class CharacterAttributes : MonoBehaviour
     private void OnDisable()
     {
         EventManager.OnItemPickUp -= CollectItem;
+        
+        //Remove all items on scene reset
+        Dictionary<Item, int> tmpList = new Dictionary<Item, int>(collectedItems);
+        foreach (var item in tmpList)
+        {
+            for (int i = 0; i < item.Value; i++)
+            {
+                print("Removed: " + item.Key);
+                RemoveItem(item.Key);
+            }
+        }
     }
     
     

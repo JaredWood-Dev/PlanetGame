@@ -18,14 +18,19 @@ public class BloodSampleItem : EnemyDeathItem
         foreach (var hitTarget in explosionCast)
         {
             if (hitTarget.gameObject != target)
-
+            {
+                if (hitTarget.gameObject.GetComponent<Health>().currentHealth <= 0)
+                    return;
+                
                 if (hitTarget.gameObject)
                 {
                     Vector2 knockbackVector =
                         (hitTarget.transform.position - target.transform.position).normalized * 50;
-                    hitTarget.gameObject.GetComponent<Health>().Damage(5 * StackCount, DamageType.Force, knockbackVector, killer);
+                    hitTarget.gameObject.GetComponent<Health>()
+                        .Damage(5 * StackCount, DamageType.Force, knockbackVector, killer);
                 }
+            }
         }
-        
+
     }
 }

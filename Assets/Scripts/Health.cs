@@ -82,13 +82,15 @@ public class Health : MonoBehaviour
 
     void KillCreature(GameObject source = null)
     {
-        Destroy(gameObject);
+        //play death animation
+        
         if (gameObject.CompareTag("Player"))
             EventManager.PlayerDeath();
         else
             EventManager.EnemyDeath(source, gameObject);
-        
+        Destroy(gameObject);
     }
+    
     
     void OnEnable()
     {

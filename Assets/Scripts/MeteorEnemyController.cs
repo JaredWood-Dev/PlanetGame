@@ -17,7 +17,8 @@ public class MeteorEnemyController : EnemyController
 
     public override void EnemyAttack()
     {
-        player.gameObject.GetComponent<Health>().Damage(damage, DamageType.Bludgeoning, player.up * 10, gameObject);
+        if (player)
+            player.gameObject.GetComponent<Health>().Damage(damage, DamageType.Bludgeoning, player.up * 10, gameObject);
         print("Meteor Attack!");
     }
 }

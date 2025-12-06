@@ -1,6 +1,7 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -90,5 +91,10 @@ public class GameManager : MonoBehaviour
     void EnemyKilled(GameObject target, GameObject killer)
     {
         enemyKills++;
+        if (enemyKills >= 10)
+        {
+            //Reload the scene once you get enough kills
+            SceneManager.LoadScene(0);
+        }
     }
 }
