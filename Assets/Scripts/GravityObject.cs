@@ -26,8 +26,8 @@ public class GravityObject : MonoBehaviour
 
     void FixedUpdate()
     {
-        //_rb.AddForce(downDirection * (gravity * Time.fixedTime), ForceMode2D.Force);
-        _rb.linearVelocity += downDirection * gravity * Time.fixedDeltaTime;
+        _rb.linearVelocity += downDirection * (gravity * Time.fixedDeltaTime);
+        
         Debug.DrawRay(transform.position, downDirection, Color.red);
 
         if (gravityObject)
@@ -44,12 +44,9 @@ public class GravityObject : MonoBehaviour
                     break;
             }
             
-            //gameObject.transform.rotation = Quaternion.Euler(0, 0, (Mathf.Atan2(downDirection.y, downDirection.x) * 180 / Mathf.PI) + 90);
             var currentUp = transform.up;
             var targetUp = -downDirection;
             
-            //transform.up = -downDirection;
-            //transform.up = Vector2.Lerp(currentUp, targetUp,rotationSpeed);
             float currentAngle = Mathf.Atan2(currentUp.y, currentUp.x) * Mathf.Rad2Deg;
             float targetAngle = Mathf.Atan2(targetUp.y, targetUp.x) * Mathf.Rad2Deg;
             float newAngle = Mathf.LerpAngle(currentAngle, targetAngle, rotationSpeed * Time.fixedDeltaTime);

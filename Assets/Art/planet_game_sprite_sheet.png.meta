@@ -1013,7 +1013,7 @@ TextureImporter:
         width: 132
         height: 34
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1022,6 +1022,28 @@ TextureImporter:
       bones: []
       spriteID: 0f96d4f9a97bfaf44be76f0248c766d9
       internalID: -1022859878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: small_planet
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 760
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23a69d4ea6c0735499cd0b8f019d4f56
+      internalID: 2027663669
       vertices: []
       indices: 
       edges: []
@@ -1080,6 +1102,7 @@ TextureImporter:
       planet_game_sprite_sheet_7: -859380221
       planet_game_sprite_sheet_8: 10881245
       planet_game_sprite_sheet_9: -726995813
+      small_planet: 2027663669
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
