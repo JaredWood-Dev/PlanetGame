@@ -25,8 +25,14 @@ public class GameManager : MonoBehaviour
     public int damageTaken;
     public int healing;
 
+    void Awake()
+    {
+        Time.timeScale = 1;
+    }
+    
     void Start()
     {
+        Time.timeScale = 1;
         timer = 0;
         TimeSpan time = TimeSpan.FromSeconds(timer);
         timerText.text = time.ToString("hh\\:mm\\:ss\\.ff");
@@ -34,12 +40,15 @@ public class GameManager : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (!timerText)
+            timerText = GameObject.Find("Timer Label").GetComponent<TextMeshProUGUI>();
+        
         timer += Time.deltaTime;
         TimeSpan time = TimeSpan.FromSeconds(timer);
         timerText.text = time.ToString("hh\\:mm\\:ss\\.ff");
 
         //TODO: REPLACE WITH MORE ELEGANT SCALING SYSTEM
-        difficulty = timer * 0.1f;
+        difficulty = timer * 0.5f;
         //difficulty = Mathf.Pow(1.1f, 0.1f * difficulty);
     }
     
@@ -94,6 +103,10 @@ public class GameManager : MonoBehaviour
         if (enemyKills >= 10)
         {
             //Reload the scene once you get enough kills
+            Time.timeScale = 0;
+
+            enemyKills = 0;
+            
             SceneManager.LoadScene(0);
         }
     }

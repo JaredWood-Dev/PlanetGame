@@ -7,6 +7,11 @@ public class EnemyDeathItem : Item
     protected CharacterAttributes PlayerAttributes;
     protected static bool IsSubbed = false;
     protected static int StackCount = 0;
+
+    void Awake()
+    {
+        StackCount = 0;
+    }
     public override void OnPickUp(CharacterAttributes attributes)
     {
         PlayerAttributes = attributes;

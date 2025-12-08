@@ -56,11 +56,23 @@ public class CharacterAttributes : MonoBehaviour
     private void OnEnable()
     {
         EventManager.OnItemPickUp += CollectItem;
+
+        var list = PersistentDataManager.Items;
+        if (list == null) return;
+        foreach (var item in list)
+        {
+            for (int i = 0; i < item.Value; i++)
+            {
+                CollectItem(item.Key);
+            }
+        }
     }
 
     private void OnDisable()
     {
         EventManager.OnItemPickUp -= CollectItem;
+        
+        PersistentDataManager.SaveItems(collectedItems);
         
         //Remove all items on scene reset
         Dictionary<Item, int> tmpList = new Dictionary<Item, int>(collectedItems);
