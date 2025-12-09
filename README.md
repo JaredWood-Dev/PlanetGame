@@ -220,3 +220,56 @@ if ((_rb.linearVelocity * transform.up).y > 0)
             _rb.linearVelocity *= 0.5f;
 ```
 This allows the player to control the jump height of the character.
+
+Following the basic mechanics is the implementation of the 'arcade' mechanics. Variable jump height was already covered, this leaves Coyote Time and Jump Buffering. Both of these mechanics make use of a timer, and cause the player to jump if some condition is met within that timer.
+
+Jump buffering occurs when the player presses the jump button, and they are not on the ground. This also starts a timer, if the player becomes grounded during that time - a jump occurs.
+```c#
+//Resolve Buffered Jumps
+        if (onGround)
+        {
+            if (jumpBuffered && _bufferTimer <= jumpBufferTime)
+            {
+                ZeroUpwardVelocity();
+                
+                _rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
+                
+                _bufferTimer = 0;
+            }
+            jumpBuffered = false;
+        }
+```
+
+Coyote time was fairly straightforward to implement, it just required adding another condition to the normal jump conditional:
+```c#
+if (onGround || _coyoteTimer <= coyoteTime)
+{
+       ZeroUpwardVelocity();
+      _rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
+}
+```
+
+These features come together to create a solid platformer controller and gravity system. The next step is uniqueness. Houston has Amethyst Dragon ancestry, which means is breath weapon is a 'singularity' breath weapon. In this game I'm using this justification for allowing it to launch him into the air.
+
+This mechanic will involve the direction of the mouse, but instead of pointing the cursor in the direction to want to jump, you must aim in the reverse direction - at the ground. In fact, if the breath weapon does not hit the ground, it does not launch you.
+
+This process involved firing a ray at the ground, and if it hit, launch the player in the opposite direction:
+```c#
+public override void SpecialAbility()
+   {
+      //Send Out a Ray from Houston, if it hits the ground, then launch Houston in the opposite direction,
+      //with a force relative to how far away the ground was
+      Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+      Vector2 diff = mousePos - (Vector2)transform.position;
+      var breathRay = Physics2D.Raycast(transform.position, diff.normalized, breathDistance, groundLayer);
+      
+      if (breathRay.collider)
+      {
+         gameObject.GetComponent<Rigidbody2D>().AddForce(-diff.normalized * (breathForce), ForceMode2D.Impulse);
+      }
+   }
+```
+
+This mechanic gives Houston a unique movement option, to set him apart from other games. Similar to how Mario has the long jump, Madeline has an air dash, and Sonic has the spin dash. The breath weapon gives many new opportunities for movement options; being able to jump when in the air, redirect your momentum, move quicker through a level, and more. This is useful because having a higher skill ceiling makes the game feel rewarding for those who can acquire the skill.
+
+
