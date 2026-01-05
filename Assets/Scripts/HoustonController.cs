@@ -16,7 +16,7 @@ public class HoustonController : PlayerController
       Vector2 diff = mousePos - (Vector2)transform.position;
       var breathRay = Physics2D.Raycast(transform.position, diff.normalized, breathDistance, groundLayer);
       AbilitySystem.StartSystem();
-      AbilitySystem.targetSystem.transform.rotation = gameObject.transform.rotation;
+      AbilitySystem.targetSystem.transform.rotation = Quaternion.Euler(0, 0, MathFunctions.VectorToDegrees(diff));
       if (breathRay.collider)
       {
          gameObject.GetComponent<Rigidbody2D>().AddForce(-diff.normalized * (breathForce), ForceMode2D.Impulse);
