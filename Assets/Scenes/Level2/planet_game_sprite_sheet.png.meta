@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c16b6624a8739d246a60f004c2626f43
+guid: b247a9bb1f55adf4dacfa2c566eae015
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -1299,7 +1299,7 @@ TextureImporter:
         width: 18
         height: 9
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1308,226 +1308,6 @@ TextureImporter:
       bones: []
       spriteID: ed8b2025b892f954eb7f56b5fcde8a41
       internalID: -92726748
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: runestone
-      rect:
-        serializedVersion: 2
-        x: 892
-        y: 984
-        width: 8
-        height: 11
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8089dba9b08e21942bb7640eaf29913f
-      internalID: -654591285
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: runestone_highlighted
-      rect:
-        serializedVersion: 2
-        x: 891
-        y: 967
-        width: 10
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: aeb94a3e3eb68bc4c88b96d4e1d88877
-      internalID: -622025325
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: runestone_activated
-      rect:
-        serializedVersion: 2
-        x: 892
-        y: 952
-        width: 8
-        height: 11
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3c0050cb2323d2441bae54190744c0b8
-      internalID: 949686672
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: door
-      rect:
-        serializedVersion: 2
-        x: 877
-        y: 976
-        width: 6
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9d19efb77516aca4bad13a1ab103d17e
-      internalID: -1141228138
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: door_open
-      rect:
-        serializedVersion: 2
-        x: 861
-        y: 976
-        width: 6
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c309f1bc180ea25478d4630661ed957b
-      internalID: -1359338688
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: acid_middle
-      rect:
-        serializedVersion: 2
-        x: 992
-        y: 936
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f1fee2a8f8c5e4f4e94a7a4150f6003d
-      internalID: -2128023601
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: acid_1
-      rect:
-        serializedVersion: 2
-        x: 984
-        y: 936
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 83f18087106ab864f88641299be9d98f
-      internalID: -164032453
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: acid_2
-      rect:
-        serializedVersion: 2
-        x: 984
-        y: 928
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cdd6ca714c666134a8e6ff57f9854ff3
-      internalID: 1585273797
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: up_sign
-      rect:
-        serializedVersion: 2
-        x: 937
-        y: 952
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 894c08ae7c69b104e82d225f0f66a1ae
-      internalID: 315037225
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tiny_planet
-      rect:
-        serializedVersion: 2
-        x: 488
-        y: 928
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 56d320bc6698e014599902a45b678efc
-      internalID: 1604676611
       vertices: []
       indices: 
       edges: []
@@ -1549,13 +1329,8 @@ TextureImporter:
       Level_button_hover: -1881121262
       UI_Button_Generic: 883632855
       ability_cell: -587066851
-      acid_1: -164032453
-      acid_2: 1585273797
-      acid_middle: -2128023601
       breath_ability: -792599522
       breath_direction: -1022859878
-      door: -1141228138
-      door_open: -1359338688
       gravity_indicator_arrow: -1148842134
       houston_idle: -4342012808790556159
       houston_jump_1: 1740281815
@@ -1600,15 +1375,10 @@ TextureImporter:
       platform_middle: -1607186382
       platform_right: -1860926199
       platform_right_wall: 770012250
-      runestone: -654591285
-      runestone_activated: 949686672
-      runestone_highlighted: -622025325
       small_planet: 2027663669
       starbit: -437192302
       teleporter: -461582029
       teleporter_highlighted: -92726748
-      tiny_planet: 1604676611
-      up_sign: 315037225
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

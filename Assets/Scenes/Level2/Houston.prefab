@@ -18,7 +18,6 @@ GameObject:
   - component: {fileID: 6401409161439808166}
   - component: {fileID: 2577031873957532781}
   - component: {fileID: 313217871862904809}
-  - component: {fileID: 6914757342209072148}
   m_Layer: 6
   m_Name: Houston
   m_TagString: Player
@@ -64,7 +63,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 19909b9318e4cb04d876c57209c1405a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -85,7 +84,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -4342012808790556159, guid: c16b6624a8739d246a60f004c2626f43, type: 3}
+  m_Sprite: {fileID: -4342012808790556159, guid: b247a9bb1f55adf4dacfa2c566eae015, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -112,7 +111,7 @@ Rigidbody2D:
   m_LinearDamping: 1
   m_AngularDamping: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 6200000, guid: da86054759c99ba46b0b72c9082f514f, type: 2}
+  m_Material: {fileID: 6200000, guid: ae3be6df3179e464ba99b9de45268ba5, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -151,7 +150,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: ed761e82216f32142a40f60fb23c6364, type: 2}
+  m_Material: {fileID: 6200000, guid: a160dff13ca41be42ad4ea460a8d40de, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -188,7 +187,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: da86054759c99ba46b0b72c9082f514f, type: 2}
+  m_Material: {fileID: 6200000, guid: ae3be6df3179e464ba99b9de45268ba5, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -264,7 +263,7 @@ Animator:
   m_GameObject: {fileID: 7162956630865142715}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 71c6f8e6a610c4f419074a0255f2c428, type: 2}
+  m_Controller: {fileID: 9100000, guid: 6d5da9258144698439b490a09fb5b954, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -288,7 +287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb90a19da75ef6d45b89bf554425ab8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetSystem: {fileID: 258267339517319329, guid: 7ed44d696c995e54597364c5983bb2f7, type: 3}
+  targetSystem: {fileID: 258267339517319329, guid: 63ad31f25c86ad84897fd33bd63d226e, type: 3}
   systemOffset: {x: 0, y: 0, z: 0}
   followObject: 0
 --- !u!114 &313217871862904809
@@ -304,15 +303,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   abilityCellOverlay: {fileID: 0}
---- !u!114 &6914757342209072148
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7162956630865142715}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df342fa5bb2c4ae4781f1e9c09ccb97c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

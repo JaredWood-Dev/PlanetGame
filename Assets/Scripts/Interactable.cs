@@ -13,18 +13,19 @@ public class Interactable : MonoBehaviour
     
     public Sprite highlight;
     public bool isClose;
-    private Sprite _defaultSprite;
+    protected Sprite DefaultSprite;
+    private bool _isPressed;
 
     void Start()
     {
-        _defaultSprite = GetComponent<SpriteRenderer>().sprite;
+        DefaultSprite = GetComponent<SpriteRenderer>().sprite;
     }
 
     void Update()
     {
         if (Input.GetButtonDown("Submit"))
         {
-            if (isClose)
+            if (isClose && !_isPressed)
             {
                 Interact();
             }
@@ -45,12 +46,13 @@ public class Interactable : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isClose = false;
-            GetComponent<SpriteRenderer>().sprite = _defaultSprite;
+            GetComponent<SpriteRenderer>().sprite = DefaultSprite;
         }
     }
 
     public virtual void Interact()
     {
         print("Interact");
+        _isPressed = true;
     }
 }
