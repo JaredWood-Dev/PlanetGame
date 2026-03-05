@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -64,6 +66,8 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D _rb;
     private Animator _an;
     protected ParticleSystemController AbilitySystem;
+    private Collider2D _footCollider;
+    private Collider2D _bodyCollider;
 
     void Start()
     {
@@ -71,6 +75,9 @@ public class PlayerController : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
         _an = GetComponent<Animator>();
         AbilitySystem = GetComponent<ParticleSystemController>();
+        
+        _footCollider = GetComponents<Collider2D>()[0];
+        _bodyCollider = GetComponents<Collider2D>()[1];
     }
 
     //Update is where the player's inputs are handled, NOT the Physics
@@ -211,6 +218,18 @@ public class PlayerController : MonoBehaviour
             }
             jumpBuffered = false;
         }
+        
+        //Edge Forgiveness
+        //Whenever the player is stuck on an edge, give them a little bump to get up the edge
+        //If the foot collider and body collider are touching the same object, we are stuck on an edge.
+        List<Collider2D> footCollisions = new List<Collider2D>();
+        _footCollider.GetContacts(footCollisions);
+        
+        List<Collider2D> bodyCollisions = new List<Collider2D>();
+        _bodyCollider.GetContacts(bodyCollisions);
+
+        var similarColliders = footCollisions.Intersect(bodyCollisions);
+
     }
 
     public virtual void SpecialAbility()

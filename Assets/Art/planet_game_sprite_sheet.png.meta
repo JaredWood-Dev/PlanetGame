@@ -1519,7 +1519,7 @@ TextureImporter:
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1528,6 +1528,292 @@ TextureImporter:
       bones: []
       spriteID: 56d320bc6698e014599902a45b678efc
       internalID: 1604676611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acid_right
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 936
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbed357e9cf390344a7874a3cf9609d8
+      internalID: -768435171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acid_left
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 920
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea705dca320dea844bfe5c2ce38ad00f
+      internalID: -204251329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: acid_down
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 920
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6d3b53ba1895aa43be5ec0040acb5eb
+      internalID: 828701534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planet_game_sprite_sheet_25
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 944
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a56b0a6189cb414c9d0d977b9e90f84
+      internalID: -1955444009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planet_game_sprite_sheet_26
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 944
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d34ea81ee5b6d141a48cf8dd16d79b0
+      internalID: -1663754182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planet_game_sprite_sheet_27
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 936
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 848d11fe39c3b95409fd5a28d582f6aa
+      internalID: 1253407742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planet_game_sprite_sheet_28
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 936
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7643e0f0d108c0645848bed1d08dfe37
+      internalID: 1345302626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planet_game_sprite_sheet_29
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 936
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46e66b20e11936b49bcc6cc66c9f1ae2
+      internalID: 298687417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planet_game_sprite_sheet_30
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 936
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 125be22ddbec20941b3afc0812d134b3
+      internalID: -1518695476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planet_game_sprite_sheet_31
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 928
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47a522044960cdd4097a2d38329d4353
+      internalID: -383544957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planet_game_sprite_sheet_32
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 928
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c5b3e831b0e3ed4e9491263a3ea5adc
+      internalID: -152633593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planet_game_sprite_sheet_33
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 928
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a522002a5c5a36f46858bf6abe2a3dce
+      internalID: -282619166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planet_game_sprite_sheet_34
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 928
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 859f0691605346b488f946158816d62e
+      internalID: -1069259618
       vertices: []
       indices: 
       edges: []
@@ -1551,7 +1837,10 @@ TextureImporter:
       ability_cell: -587066851
       acid_1: -164032453
       acid_2: 1585273797
+      acid_down: 828701534
+      acid_left: -204251329
       acid_middle: -2128023601
+      acid_right: -768435171
       breath_ability: -792599522
       breath_direction: -1022859878
       door: -1141228138
@@ -1587,7 +1876,17 @@ TextureImporter:
       planet_game_sprite_sheet_22: 2078565238
       planet_game_sprite_sheet_23: 43498690
       planet_game_sprite_sheet_24: -1789287056
+      planet_game_sprite_sheet_25: -1955444009
+      planet_game_sprite_sheet_26: -1663754182
+      planet_game_sprite_sheet_27: 1253407742
+      planet_game_sprite_sheet_28: 1345302626
+      planet_game_sprite_sheet_29: 298687417
       planet_game_sprite_sheet_3: -2022687361
+      planet_game_sprite_sheet_30: -1518695476
+      planet_game_sprite_sheet_31: -383544957
+      planet_game_sprite_sheet_32: -152633593
+      planet_game_sprite_sheet_33: -282619166
+      planet_game_sprite_sheet_34: -1069259618
       planet_game_sprite_sheet_4: 2079342880
       planet_game_sprite_sheet_5: 1019808808
       planet_game_sprite_sheet_6: -2095654014
