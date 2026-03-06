@@ -20,6 +20,7 @@ public class HoustonController : PlayerController
       if (breathRay.collider)
       {
          gameObject.GetComponent<Rigidbody2D>().AddForce(-diff.normalized * (breathForce), ForceMode2D.Impulse);
+         BreathEffect.Play();
       }
    }
 }

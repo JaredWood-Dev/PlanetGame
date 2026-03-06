@@ -69,6 +69,9 @@ public class PlayerController : MonoBehaviour
     private Collider2D _footCollider;
     private Collider2D _bodyCollider;
 
+    private AudioSource _jumpEffect;
+    protected AudioSource BreathEffect;
+
     void Start()
     {
         //Assign the Rigidbody
@@ -78,6 +81,9 @@ public class PlayerController : MonoBehaviour
         
         _footCollider = GetComponents<Collider2D>()[0];
         _bodyCollider = GetComponents<Collider2D>()[1];
+        
+        _jumpEffect = GetComponents<AudioSource>()[1];
+        BreathEffect = GetComponents<AudioSource>()[0];
     }
 
     //Update is where the player's inputs are handled, NOT the Physics
@@ -182,6 +188,7 @@ public class PlayerController : MonoBehaviour
             {
                 ZeroUpwardVelocity();
                 _rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
+                _jumpEffect.Play();
             }
 
             if (!onGround)
@@ -215,6 +222,8 @@ public class PlayerController : MonoBehaviour
                 _rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
                 print("jumped with " + (transform.up * jumpForce));
                 _bufferTimer = 0;
+                
+                _jumpEffect.Play();
             }
             jumpBuffered = false;
         }
