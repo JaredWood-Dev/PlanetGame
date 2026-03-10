@@ -8,6 +8,8 @@ The player takes on the role of **Houston** a dragonborn astronaut, to explore v
 ## Usage
 Refer to the game's itch.io page where it can be played in the browser. `A` and `D` move the character left and right, `space` causes the character to jump, and `left shift` causes the character to use his gravity breath weapon - which launches the character into the air.
 
+Check out the trailer here: https://youtu.be/THWZ84x-TQs
+
 ---
 
 ## Development
