@@ -1824,7 +1824,7 @@ TextureImporter:
         serializedVersion: 2
         x: 3
         y: 33
-        width: 13
+        width: 14
         height: 13
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1844,9 +1844,9 @@ TextureImporter:
       name: armor_bar_middle_filled
       rect:
         serializedVersion: 2
-        x: 16
-        y: 37
-        width: 8
+        x: 13
+        y: 56
+        width: 10
         height: 6
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1867,8 +1867,8 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 24
-        y: 37
-        width: 8
+        y: 56
+        width: 9
         height: 6
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1888,9 +1888,9 @@ TextureImporter:
       name: armor_bar_middle_empty
       rect:
         serializedVersion: 2
-        x: 16
-        y: 45
-        width: 8
+        x: 13
+        y: 48
+        width: 10
         height: 6
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1911,8 +1911,8 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 24
-        y: 45
-        width: 8
+        y: 48
+        width: 9
         height: 6
       alignment: 0
       pivot: {x: 0.5, y: 0.5}

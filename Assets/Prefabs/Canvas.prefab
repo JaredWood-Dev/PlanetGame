@@ -228,8 +228,15 @@ MonoBehaviour:
   armorEnd: {fileID: 1742499435, guid: c16b6624a8739d246a60f004c2626f43, type: 3}
   armorMiddleEmpty: {fileID: 617361463, guid: c16b6624a8739d246a60f004c2626f43, type: 3}
   armorEndEmpty: {fileID: 38419420, guid: c16b6624a8739d246a60f004c2626f43, type: 3}
+  initX: -4
+  initY: -0.49
+  offsetX: 80
+  endOffsetX: -12.2
+  scale: 1.16
   armorCell: {fileID: 6669117920188422862, guid: dba0315ee4392134997f57ad8391c699, type: 3}
   armorCellEnd: {fileID: 1902260253307743092, guid: 175c55fe5a25d9649b31e0c7fb2549bd, type: 3}
+  armorTotal: 5
+  armor: 2
 --- !u!1 &2030375832395955734
 GameObject:
   m_ObjectHideFlags: 0
