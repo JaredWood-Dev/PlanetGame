@@ -24,12 +24,13 @@ public class Armor : MonoBehaviour
     void Start()
     {
         currentArmorSlots = armorSlots;
+        _rb = GetComponent<Rigidbody2D>();
     }
 
-    void Hit(int damage, Vector2 knockback)
+    public void Hit(int damage, GameObject attacker = null, Vector2 knockback = new Vector2())
     {
-        _rb.AddForce(knockback *  (1 - (knockbackResistance * 100)), ForceMode2D.Impulse);
-        if (armorSlots <= 0)
+        _rb.AddForce(knockback, ForceMode2D.Impulse);
+        if (currentArmorSlots <= 0)
         {
             //Creature dies    
             Destroy(gameObject);
@@ -40,14 +41,23 @@ public class Armor : MonoBehaviour
         {
             currentArmorSlots = 0;
         }
+        else
+        {
+            currentArmorSlots -= damage;
+        }
+        EventManager.ArmorHit(gameObject, attacker, currentArmorSlots);
     }
 
-    void RestoreArmor(int amount)
+    public void RestoreArmor(int amount)
     {
         if (currentArmorSlots + amount >= armorSlots)
         {
             currentArmorSlots = armorSlots;
         }
-        currentArmorSlots += amount;
+        else
+        {
+            currentArmorSlots += amount;
+        }
+        EventManager.ArmorHit(gameObject, gameObject, currentArmorSlots);
     }
 }

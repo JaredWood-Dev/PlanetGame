@@ -15,6 +15,7 @@ public class Interactable : MonoBehaviour
     public bool isClose;
     protected Sprite DefaultSprite;
     private bool _isPressed;
+    protected GameObject player;
 
     void Start()
     {
@@ -38,6 +39,7 @@ public class Interactable : MonoBehaviour
         {
             isClose = true;
             GetComponent<SpriteRenderer>().sprite = highlight;
+            player = other.gameObject;
         }
     }
 
@@ -47,6 +49,7 @@ public class Interactable : MonoBehaviour
         {
             isClose = false;
             GetComponent<SpriteRenderer>().sprite = DefaultSprite;
+            player = null;
         }
     }
 

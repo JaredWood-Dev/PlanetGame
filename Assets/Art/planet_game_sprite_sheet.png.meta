@@ -1928,6 +1928,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: armor_station
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 976
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8093a247722941f42afd102a0d466c2c
+      internalID: 542809597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -1956,6 +1978,7 @@ TextureImporter:
       armor_bar_icon: 2128189427
       armor_bar_middle_empty: 617361463
       armor_bar_middle_filled: 749550947
+      armor_station: 542809597
       breath_ability: -792599522
       breath_direction: -1022859878
       door: -1141228138

@@ -22,11 +22,11 @@ public class ArmorGUI : MonoBehaviour
 
     void Start()
     {
-        SetArmorCount(armorTotal);
+        EventManager.ArmorUpdate(6);
     }
     void Update()
     {
-        SetArmorCount(armorTotal);
+        //SetArmorCount(armorTotal);
         //SetFillCount(armor);
     }
 
@@ -48,15 +48,38 @@ public class ArmorGUI : MonoBehaviour
         cellEnd.GetComponent<Image>().sprite = armorEnd;
         cellEnd.GetComponent<RectTransform>().anchoredPosition += new Vector2((total - 2) * offsetX + endOffsetX, initY);
         cellEnd.transform.localScale = new Vector3(scale * 0.8f, scale * 0.8f, scale * 0.8f);
+        
+        SetFillCount(armor);
     }
 
     void SetFillCount(int amount)
     {
+        if (amount > armorTotal)
+            amount = armorTotal; armor = amount;
+            
         for (int i = transform.childCount - 1; i > -1; i--)
         {
             transform.GetChild(i).GetComponent<Image>().sprite = i >= amount ? armorMiddleEmpty : armorMiddle;
         }
 
         transform.GetChild(transform.childCount - 1).GetComponent<Image>().sprite = amount == transform.childCount ? armorEnd : armorEndEmpty;
+    }
+
+    void ArmorSlotUpdate(GameObject target, GameObject attacker, int amount)
+    {
+        if (target.CompareTag("Player"))
+            SetFillCount(amount);
+    }
+
+    void OnEnable()
+    {
+        EventManager.OnArmorHit += ArmorSlotUpdate;
+        EventManager.OnArmorUpdate += SetArmorCount;
+    }
+
+    void OnDisable()
+    {
+        EventManager.OnArmorHit -= ArmorSlotUpdate;
+        EventManager.OnArmorUpdate -= SetArmorCount;
     }
 }
