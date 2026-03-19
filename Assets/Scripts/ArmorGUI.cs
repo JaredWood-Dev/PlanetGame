@@ -37,7 +37,7 @@ public class ArmorGUI : MonoBehaviour
             Destroy(transform.GetChild(i).gameObject);
         }
         
-        for (int i = 0; i < total - 1; i++)
+        for (int i = 0; i < total - 2; i++)
         {
             GameObject cell = Instantiate(armorCell, transform);
             cell.GetComponent<Image>().sprite = armorMiddle;
@@ -46,7 +46,7 @@ public class ArmorGUI : MonoBehaviour
         }
         GameObject cellEnd = Instantiate(armorCellEnd, transform);
         cellEnd.GetComponent<Image>().sprite = armorEnd;
-        cellEnd.GetComponent<RectTransform>().anchoredPosition += new Vector2((total - 2) * offsetX + endOffsetX, initY);
+        cellEnd.GetComponent<RectTransform>().anchoredPosition += new Vector2((total - 3) * offsetX + endOffsetX, initY);
         cellEnd.transform.localScale = new Vector3(scale * 0.8f, scale * 0.8f, scale * 0.8f);
         
         SetFillCount(armor);

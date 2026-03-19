@@ -7,9 +7,19 @@ public class ArmorStation : Interactable
      */
 
     public int amount;
+    private ParticleSystemController _system;
+
+    void Start()
+    {
+        _system = GetComponent<ParticleSystemController>();
+        DefaultSprite = highlight;
+    }
     public override void Interact()
     {
         if (player)
+        {
             player.GetComponent<Armor>().RestoreArmor(amount);
+            _system.StartSystem();
+        }
     }
 }
