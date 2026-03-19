@@ -6,7 +6,7 @@ public class Hazard : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<Armor>().Hit(1, gameObject, transform.up * 1000);
+            collision.gameObject.GetComponent<Armor>().Hit(1, gameObject, transform.up * 2500);
         }
     }
 }

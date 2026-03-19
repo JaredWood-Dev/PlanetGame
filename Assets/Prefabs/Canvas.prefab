@@ -236,7 +236,7 @@ MonoBehaviour:
   armorCell: {fileID: 6669117920188422862, guid: dba0315ee4392134997f57ad8391c699, type: 3}
   armorCellEnd: {fileID: 1902260253307743092, guid: 175c55fe5a25d9649b31e0c7fb2549bd, type: 3}
   armorTotal: 5
-  armor: 2
+  armor: 5
 --- !u!1 &2030375832395955734
 GameObject:
   m_ObjectHideFlags: 0

@@ -18,7 +18,6 @@ GameObject:
   - component: {fileID: 6401409161439808166}
   - component: {fileID: 2577031873957532781}
   - component: {fileID: 313217871862904809}
-  - component: {fileID: 6914757342209072148}
   - component: {fileID: -7251288109067231579}
   - component: {fileID: 8923247038560897998}
   - component: {fileID: 7117517325965671209}
@@ -307,18 +306,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   abilityCellOverlay: {fileID: 0}
---- !u!114 &6914757342209072148
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7162956630865142715}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df342fa5bb2c4ae4781f1e9c09ccb97c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &-7251288109067231579
 AudioSource:
   m_ObjectHideFlags: 0
@@ -527,4 +514,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   armorSlots: 5
   currentArmorSlots: 0
+  knockbackResistance: 0
   regenerationRate: 0

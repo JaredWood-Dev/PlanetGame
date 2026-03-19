@@ -24,7 +24,7 @@ public class Interactable : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Submit"))
+        if (Input.GetButtonDown("Fire1"))
         {
             if (isClose && !_isPressed)
             {

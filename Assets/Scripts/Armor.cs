@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Armor : MonoBehaviour
 {
@@ -33,7 +34,7 @@ public class Armor : MonoBehaviour
         if (currentArmorSlots <= 0)
         {
             //Creature dies    
-            Destroy(gameObject);
+            DestroyCreature();
             return;
         }
         
@@ -59,5 +60,18 @@ public class Armor : MonoBehaviour
             currentArmorSlots += amount;
         }
         EventManager.ArmorHit(gameObject, gameObject, currentArmorSlots);
+    }
+
+    void DestroyCreature()
+    {
+        if (gameObject.CompareTag("Player"))
+        {
+            //Game Over!
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 }
