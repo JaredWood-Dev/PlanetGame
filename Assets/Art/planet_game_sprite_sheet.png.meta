@@ -2553,7 +2553,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2575,7 +2575,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2597,7 +2597,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2619,7 +2619,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2641,7 +2641,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2663,7 +2663,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2685,7 +2685,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2707,7 +2707,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2729,7 +2729,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2751,7 +2751,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2773,7 +2773,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2795,7 +2795,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2804,6 +2804,138 @@ TextureImporter:
       bones: []
       spriteID: e75e72a4c17757b4f8fbf200c072d39b
       internalID: 170070805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bed
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 904
+        width: 24
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df616a53d16eac940850191f88438ed0
+      internalID: 980091628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: homeworld_painting
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 896
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80cb8acc20e8c6b418a7db83d2be949e
+      internalID: 2119652138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mentor_painting
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 888
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 574d9efc95c657140abeb576bab5642e
+      internalID: -1447394525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall_flag
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 896
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bcda5d40364f1f44a0eebb497ba08f7
+      internalID: 93326119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armor_stand
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 868
+        width: 12
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26a03525175182348a0e73d441c57556
+      internalID: -1348046993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: space_poster
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 872
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8efc2947c0b6134ba583e8448c8a221
+      internalID: 1222009367
       vertices: []
       indices: 
       edges: []
@@ -2836,8 +2968,10 @@ TextureImporter:
       armor_bar_icon: 2128189427
       armor_bar_middle_empty: 617361463
       armor_bar_middle_filled: 749550947
+      armor_stand: -1348046993
       armor_station: 542809597
       banner: -1617426749
+      bed: 980091628
       breath_ability: -792599522
       breath_direction: -1022859878
       concrete_1: 1086243287
@@ -2870,6 +3004,7 @@ TextureImporter:
       flag_2: 1540132238
       flag_3: 248836963
       gravity_indicator_arrow: -1148842134
+      homeworld_painting: 2119652138
       houston_idle: -4342012808790556159
       houston_jump_1: 1740281815
       houston_jump_2: 651297889
@@ -2884,6 +3019,7 @@ TextureImporter:
       level_button: 52398970
       magenta: -554711531
       maroon: 1651684038
+      mentor_painting: -1447394525
       planet_game_sprite_sheet_0: -106200029
       planet_game_sprite_sheet_1: -1504120346
       planet_game_sprite_sheet_10: -1168345982
@@ -2930,6 +3066,7 @@ TextureImporter:
       runestone_activated: 949686672
       runestone_highlighted: -622025325
       small_planet: 2027663669
+      space_poster: 1222009367
       starbit: -437192302
       stone_brick_1: 1646193727
       stone_brick_2: 319708572
@@ -2939,6 +3076,7 @@ TextureImporter:
       teleporter_highlighted: -92726748
       tiny_planet: 1604676611
       up_sign: 315037225
+      wall_flag: 93326119
       wood: -1645754033
       wood_2: 1107081328
       wood_3: -732884160
