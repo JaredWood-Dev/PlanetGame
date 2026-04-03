@@ -12,8 +12,19 @@ public class HoustonController : PlayerController
       //print("Singularity Breath Weapon Used!");
       //Send Out a Ray from Houston, if it hits the ground, then launch Houston in the opposite direction,
       //with a force relative to how far away the ground was
-      Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-      Vector2 diff = mousePos - (Vector2)transform.position;
+      Vector2 diff;
+      if (GameManager.isController)
+      {
+         //Controller Implmentation
+         diff = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y")).normalized;
+      }
+      else
+      {
+         //Mouse Implementation
+         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+         diff = mousePos - (Vector2)transform.position;
+      }
+
       var breathRay = Physics2D.Raycast(transform.position, diff.normalized, breathDistance, groundLayer);
       AbilitySystem.StartSystem();
       AbilitySystem.targetSystem.transform.rotation = Quaternion.Euler(0, 0, MathFunctions.VectorToDegrees(diff));
