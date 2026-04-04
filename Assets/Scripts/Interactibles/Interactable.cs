@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Interactable : MonoBehaviour
 {
@@ -17,14 +18,20 @@ public class Interactable : MonoBehaviour
     private bool _isPressed;
     protected GameObject player;
 
+    [SerializeField]
+    private InputActionReference interactAction;
+
     void Start()
     {
         DefaultSprite = GetComponent<SpriteRenderer>().sprite;
+        
+        //interactAction = InputSystem.actions.FindAction("Player/Interact");
     }
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        print(InputSystem.actions);
+        if (interactAction.action.WasPressedThisFrame())
         {
             if (isClose && !_isPressed)
             {

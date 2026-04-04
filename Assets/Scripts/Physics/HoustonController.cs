@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class HoustonController : PlayerController
 {
@@ -21,7 +22,7 @@ public class HoustonController : PlayerController
       else
       {
          //Mouse Implementation
-         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
          diff = mousePos - (Vector2)transform.position;
       }
 

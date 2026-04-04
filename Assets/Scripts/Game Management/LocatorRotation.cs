@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class LocatorRotation : MonoBehaviour
@@ -8,10 +9,9 @@ public class LocatorRotation : MonoBehaviour
     void Update()
     {
         var playerPos = player.transform.position;
-        var playerScreenPos = Camera.main.WorldToScreenPoint(playerPos);
-        var mousePos = Input.mousePosition; ;
-
-        print(diff.magnitude);
+        var playerScreenPos = (Vector2)Camera.main.WorldToScreenPoint(playerPos);
+        var mousePos = Mouse.current.position.ReadValue();
+        
         if (GameManager.isController)
         { 
             Vector2 direction = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y")).normalized;

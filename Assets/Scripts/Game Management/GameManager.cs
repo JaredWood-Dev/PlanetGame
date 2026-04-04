@@ -11,8 +11,12 @@ public class GameManager : MonoBehaviour
 
     private void LateUpdate()
     {
-        var gamepad = Gamepad.current.lastUpdateTime;
-        var keyboard = Keyboard.current.lastUpdateTime;
+        var gamepad = 0.0;
+        var keyboard = 0.0;
+
+        if (Gamepad.current != null)
+            gamepad = Gamepad.current.lastUpdateTime;
+        keyboard = Keyboard.current.lastUpdateTime;
         isController = (gamepad > keyboard) ? true : false;
         
     }

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
 
 public class PlayerController : MonoBehaviour
@@ -72,6 +73,10 @@ public class PlayerController : MonoBehaviour
     private AudioSource _jumpEffect;
     protected AudioSource BreathEffect;
 
+    private InputAction _jumpAction;
+    private InputAction _moveAction;
+    private InputAction _specialAbilityAction;
+
     void Start()
     {
         //Assign the Rigidbody
@@ -84,26 +89,30 @@ public class PlayerController : MonoBehaviour
         
         _jumpEffect = GetComponents<AudioSource>()[1];
         BreathEffect = GetComponents<AudioSource>()[0];
+
+        _jumpAction = InputSystem.actions.FindAction("Jump");
+        _moveAction = InputSystem.actions.FindAction("Move");
+        _specialAbilityAction = InputSystem.actions.FindAction("Attack");
     }
 
     //Update is where the player's inputs are handled, NOT the Physics
     void Update()
     {
         // Handle Left-Right Inputs
-        direction = Input.GetAxis("Horizontal");
+        direction = _moveAction.ReadValue<Vector2>().x;
        
         //Handle the Jump Inputs
-        if (Input.GetButtonDown("Jump"))
+        if (_jumpAction.WasPressedThisFrame())
         {
             jumpState = KeyState.Down;
         }
 
-        if (Input.GetButtonUp("Jump"))
+        if (_jumpAction.WasReleasedThisFrame())
         {
             jumpState = KeyState.Up;
         }
 
-        if (Input.GetButtonDown("Fire3"))
+        if (_specialAbilityAction.WasPressedThisFrame())
         {
             if (abilityCoolDownTimer >= abilityCoolDown)
             {
