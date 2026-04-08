@@ -3653,7 +3653,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3662,6 +3662,138 @@ TextureImporter:
       bones: []
       spriteID: 333d04ddf3516bc4b80644e7360935d9
       internalID: -1237971900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glass_1
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 992
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80a36c8cf5a43114f9d4bf30732fa395
+      internalID: -1737810189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glass_2
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 992
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b05efffc7e917542a5097e2b59f60b4
+      internalID: 672103589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glass_3
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 992
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3a50d7471ba45147afc92675f00697f
+      internalID: 1735905878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glass_4
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 992
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b81ce84698d39b48afc29b738eeb8ed
+      internalID: 1411519053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glass_5
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 984
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd89d071ed5a7cc45af7152f797133ee
+      internalID: 1143858484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: glass_6
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 984
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a0f110b3c6f6dd4d92c24427ec34d2f
+      internalID: 1521190617
       vertices: []
       indices: 
       edges: []
@@ -3749,6 +3881,12 @@ TextureImporter:
       foliage_8: 600788319
       foliage_9: -2111772296
       foliage_background: -1237971900
+      glass_1: -1737810189
+      glass_2: 672103589
+      glass_3: 1735905878
+      glass_4: 1411519053
+      glass_5: 1143858484
+      glass_6: 1521190617
       gravity_indicator_arrow: -1148842134
       homeworld_painting: 2119652138
       horizon_bench: -972923187

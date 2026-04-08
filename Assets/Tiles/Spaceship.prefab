@@ -142,6 +142,16 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: 1, y: -2, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 15
+      m_TileSpriteIndex: 21
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741826
   - first: {x: -4, y: -1, z: 0}
     second:
       serializedVersion: 2
@@ -334,6 +344,8 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 527e55739dd325b41b246c1ee2e6ee4d, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: b4b928f5230369640b0fe5340cc6d798, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 45093ce012d89b84c9487414c47d6663, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 1
     m_Data: {fileID: -1789287056, guid: c16b6624a8739d246a60f004c2626f43, type: 3}
@@ -377,8 +389,10 @@ Tilemap:
     m_Data: {fileID: 593230608, guid: c16b6624a8739d246a60f004c2626f43, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -1237971900, guid: c16b6624a8739d246a60f004c2626f43, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 1411519053, guid: c16b6624a8739d246a60f004c2626f43, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 21
+  - m_RefCount: 22
     m_Data:
       e00: 1
       e01: 0
@@ -397,7 +411,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 21
+  - m_RefCount: 22
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -578,6 +592,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highlight: {fileID: -622025325, guid: c16b6624a8739d246a60f004c2626f43, type: 3}
   isClose: 0
+  interactAction: {fileID: 0}
   targetObject: {fileID: 0}
   onePress: 0
   pressedSprite: {fileID: 949686672, guid: c16b6624a8739d246a60f004c2626f43, type: 3}
@@ -915,7 +930,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7968956947676904246, guid: 67bf581093e6de94ea7d42eae9b85453, type: 3}
   m_PrefabInstance: {fileID: 8795492425166132662}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4473753841758298104
+--- !u!114 &7556172945171617895
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
