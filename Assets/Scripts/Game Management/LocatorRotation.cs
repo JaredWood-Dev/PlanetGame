@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -5,7 +6,9 @@ using UnityEngine.UI;
 public class LocatorRotation : MonoBehaviour
 {
     public GameObject player;
-    private Vector2 diff = Vector2.zero;
+    private Vector2 diff = Vector2.right;
+
+    public TextMeshProUGUI breathText;
 
     public InputActionReference lookAction;
     
@@ -17,12 +20,16 @@ public class LocatorRotation : MonoBehaviour
         
         if (GameManager.isController)
         { 
-            diff = lookAction.action.ReadValue<Vector2>();
-           print(lookAction.action.ReadValue<Vector2>());
+            if (lookAction.action.phase == InputActionPhase.Started)
+                diff = lookAction.action.ReadValue<Vector2>().normalized;
+
+            breathText.text = "RT";
         }
         else
         {
             diff = mousePos - playerScreenPos;
+            
+            breathText.text = "LSHIFT";
         }
             
         var rot = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;

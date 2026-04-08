@@ -9,18 +9,19 @@ public class HoustonController : PlayerController
    public float breathDamage;
 
    public InputActionReference pointAction;
+   private Vector2 diff = Vector2.right;
    
    public override void SpecialAbility()
    {
       //print("Singularity Breath Weapon Used!");
       //Send Out a Ray from Houston, if it hits the ground, then launch Houston in the opposite direction,
       //with a force relative to how far away the ground was
-      Vector2 diff;
       if (GameManager.isController)
       {
          //Controller Implementation
          //diff = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y")).normalized;
-         diff = pointAction.action.ReadValue<Vector2>();
+         if (pointAction.action.phase == InputActionPhase.Started)
+            diff = pointAction.action.ReadValue<Vector2>();
       }
       else
       {
