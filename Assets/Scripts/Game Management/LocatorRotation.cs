@@ -6,6 +6,9 @@ public class LocatorRotation : MonoBehaviour
 {
     public GameObject player;
     private Vector2 diff = Vector2.zero;
+
+    public InputActionReference lookAction;
+    
     void Update()
     {
         var playerPos = player.transform.position;
@@ -14,9 +17,8 @@ public class LocatorRotation : MonoBehaviour
         
         if (GameManager.isController)
         { 
-            Vector2 direction = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y")).normalized;
-            if (direction.magnitude >= 0.99f)
-                diff = direction;
+            diff = lookAction.action.ReadValue<Vector2>();
+           print(lookAction.action.ReadValue<Vector2>());
         }
         else
         {

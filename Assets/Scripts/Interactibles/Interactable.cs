@@ -30,7 +30,6 @@ public class Interactable : MonoBehaviour
 
     void Update()
     {
-        print(InputSystem.actions);
         if (interactAction.action.WasPressedThisFrame())
         {
             if (isClose && !_isPressed)

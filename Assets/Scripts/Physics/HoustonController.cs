@@ -7,6 +7,8 @@ public class HoustonController : PlayerController
    public float breathDistance;
    public float breathForce;
    public float breathDamage;
+
+   public InputActionReference pointAction;
    
    public override void SpecialAbility()
    {
@@ -16,8 +18,9 @@ public class HoustonController : PlayerController
       Vector2 diff;
       if (GameManager.isController)
       {
-         //Controller Implmentation
-         diff = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y")).normalized;
+         //Controller Implementation
+         //diff = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y")).normalized;
+         diff = pointAction.action.ReadValue<Vector2>();
       }
       else
       {
