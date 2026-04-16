@@ -3741,7 +3741,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3763,7 +3763,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3785,7 +3785,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3794,6 +3794,204 @@ TextureImporter:
       bones: []
       spriteID: 4a0f110b3c6f6dd4d92c24427ec34d2f
       internalID: 1521190617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pillar_1
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 816
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40a128e8dbe3f7a46aff51754e6002ea
+      internalID: -1259165997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pillar_3
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 800
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42b6d259924d0ec4abc27fe5f0e0fbbd
+      internalID: 1180190728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pillar_2
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 808
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 825e12acde564b746b270341a316c9fd
+      internalID: -2100558831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dinosuar
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 984
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba7105ff1118fb140a8f7a13bb26b440
+      internalID: 1568327285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dino_walk_1
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 968
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6797c856cb13f4b469edf131a45cb59c
+      internalID: 1877516054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dino_walk_2
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 968
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ea7bfadd2fcd9547a5a7685b61a9d55
+      internalID: -1768495528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dino_walk_3
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 968
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dd2be5a237953945b703faee2fd2500
+      internalID: 1159504240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dino_walk_4
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 968
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44493aa0e1d8eb34e9ee15906b7369c2
+      internalID: 1483595642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dino_talk
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 952
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 202c04dc092eeef48a9182f3e4e1b325
+      internalID: 664750572
       vertices: []
       indices: 
       edges: []
@@ -3859,6 +4057,12 @@ TextureImporter:
       concrete_platform_middle: -733105665
       concrete_platform_right: -1331132183
       conrete_bkg_1: 478563361
+      dino_talk: 664750572
+      dino_walk_1: 1877516054
+      dino_walk_2: -1768495528
+      dino_walk_3: 1159504240
+      dino_walk_4: 1483595642
+      dinosuar: 1568327285
       display_board: -473861731
       door: -1141228138
       door_open: -1359338688
@@ -3910,6 +4114,9 @@ TextureImporter:
       maroon: 1651684038
       mentor_painting: -1447394525
       moss: 1559438961
+      pillar_1: -1259165997
+      pillar_2: -2100558831
+      pillar_3: 1180190728
       planet_game_sprite_sheet_0: -106200029
       planet_game_sprite_sheet_1: -1504120346
       planet_game_sprite_sheet_10: -1168345982
