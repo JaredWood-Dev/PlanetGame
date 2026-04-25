@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: aec5732098222604b842e48254b7c006
+guid: 50d69527bccb65d4dbb649e3f9810474
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4954998764208421349
-    second: horizon_buildings_0
+      213: 823202880350801674
+    second: horizon_buildings_attacked_0
+  - first:
+      213: 8503315688239207114
+    second: horizon_buildings_attacked_1
+  - first:
+      213: -4050072738585359873
+    second: horizon_buildings_attacked_2
+  - first:
+      213: 7005311764477323600
+    second: horizon_buildings_attacked_3
+  - first:
+      213: -2397204855679318140
+    second: horizon_buildings_attacked_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,89 +138,111 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tall_building
+      name: horizon_buildings_attacked_0
       rect:
         serializedVersion: 2
         x: 225
         y: 0
-        width: 286
-        height: 844
+        width: 352
+        height: 765
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b168bdc60ee4c3bb0800000000000000
-      internalID: -4954998764208421349
+      spriteID: a0f436d78aa9c6b00800000000000000
+      internalID: 823202880350801674
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dragon_building
+      name: horizon_buildings_attacked_1
       rect:
         serializedVersion: 2
-        x: 511
+        x: 693
         y: 0
-        width: 503
-        height: 395
+        width: 312
+        height: 398
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 3118e58a141b42447b6132ae83940221
-      internalID: -178575155
+      spriteID: ac21182e098d10670800000000000000
+      internalID: 8503315688239207114
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: short_building
+      name: horizon_buildings_attacked_2
       rect:
         serializedVersion: 2
-        x: 1134
-        y: 1
-        width: 207
-        height: 304
+        x: 1566
+        y: 321
+        width: 21
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: fe1e256d280156542b16f55b83e74149
-      internalID: -705814613
+      spriteID: ff9402e6d404bc7c0800000000000000
+      internalID: -4050072738585359873
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spiral_building
+      name: horizon_buildings_attacked_3
       rect:
         serializedVersion: 2
-        x: 1496
+        x: 1146
         y: 0
-        width: 205
-        height: 348
+        width: 176
+        height: 307
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 906371de0a0e8a3458e026d3597f2ec3
-      internalID: -2094630447
+      spriteID: 059298e1fedd73160800000000000000
+      internalID: 7005311764477323600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: horizon_buildings_attacked_4
+      rect:
+        serializedVersion: 2
+        x: 1520
+        y: 0
+        width: 169
+        height: 279
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 487846b72ea6bbed0800000000000000
+      internalID: -2397204855679318140
       vertices: []
       indices: 
       edges: []
@@ -217,7 +251,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -227,10 +261,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      dragon_building: -178575155
-      short_building: -705814613
-      spiral_building: -2094630447
-      tall_building: -4954998764208421349
+      horizon_buildings_attacked_0: 823202880350801674
+      horizon_buildings_attacked_1: 8503315688239207114
+      horizon_buildings_attacked_2: -4050072738585359873
+      horizon_buildings_attacked_3: 7005311764477323600
+      horizon_buildings_attacked_4: -2397204855679318140
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
