@@ -3996,6 +3996,578 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: nanites1.1
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 960
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 341b0b4f423c4074889ef91d3080cf18
+      internalID: 194296480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nanites1.3
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 960
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4136e80f7c16fe45b4f2709ba941ecf
+      internalID: 388929377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nanites1.5
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 960
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d39428df53c18144baec96747bd1d009
+      internalID: -216148196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nanites1.7
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 960
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c82f89c538be17458b95e92fa0aa845
+      internalID: -1990750749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nanites1.9
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 960
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c1849b891d05814e82a8feb4a9688b2
+      internalID: -8555605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nanite1.11
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 960
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18d51bb83004b0a4ab69d3224eb13c9e
+      internalID: -2044138120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: naites1.12
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 952
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4041e2930dd567f4f8bda52bd9393a38
+      internalID: -537344190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nanite1.10
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 952
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c7248df24d20564890bd67963c22a60
+      internalID: -1996208490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nanites1.8
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 952
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55bee8641d5afad45822102c52cf1fa4
+      internalID: -2046853276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nanites1.6
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 952
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a790b5affc4ba344be5f98b471345ca
+      internalID: -1753983234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nanites1.4
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 952
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e884652bcc5d8645ab3a801902abf7d
+      internalID: 733350726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nanites1.2
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 952
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad83acbe47fbd2645b66faaceee0b17f
+      internalID: 824880049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nanites1.13
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 960
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52ad0681f2fefdb4db201e474729984b
+      internalID: -1796966341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nanites2.1
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 944
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5368de71c1d1d644490d08f9a999e3fe
+      internalID: -1483808861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nanites2.2
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 936
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b2944f5bb6d4d64584a90e4ffe9a852
+      internalID: 1391246817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nanites2.3
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 944
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50c0c635f62710b4990333dc0ddd05e3
+      internalID: 1257705811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nanites2.4
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 936
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e7b9e301e434264785e2fdda13cad56
+      internalID: 1432920304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nanites2.5
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 944
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ced534df0a37344449967684ae48300d
+      internalID: -1879896014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nanites2.6
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 936
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a66aa61322b9f1f468b4a25548beac3b
+      internalID: -1426013814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nanites2.7
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 944
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad658cb801840b344929e3aaeff8217e
+      internalID: 2113167048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nanites2.8
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 936
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9337ea0b404d7b744a2b276f0370115c
+      internalID: -1149864571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nanites2.9
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 944
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e83a6b5fc7fcee4c92d4bc6abb0bb88
+      internalID: -1520612601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nanites2.10
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 936
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 796910f6be0166940b25c4a1520623ae
+      internalID: -764140395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nanites2.11
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 944
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57e4d78e59312694bbcf86bc28d61d8f
+      internalID: -221764511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nanites2.12
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 936
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a1771fb163c8ec44ad6b8d7cd784ede
+      internalID: -1075475359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nanites2.13
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 944
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df9f0aec17d356c4f9bc3db059412aec
+      internalID: 1395916734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -4114,6 +4686,32 @@ TextureImporter:
       maroon: 1651684038
       mentor_painting: -1447394525
       moss: 1559438961
+      naites1.12: -537344190
+      nanite1.10: -1996208490
+      nanite1.11: -2044138120
+      nanites1.1: 194296480
+      nanites1.13: -1796966341
+      nanites1.2: 824880049
+      nanites1.3: 388929377
+      nanites1.4: 733350726
+      nanites1.5: -216148196
+      nanites1.6: -1753983234
+      nanites1.7: -1990750749
+      nanites1.8: -2046853276
+      nanites1.9: -8555605
+      nanites2.1: -1483808861
+      nanites2.10: -764140395
+      nanites2.11: -221764511
+      nanites2.12: -1075475359
+      nanites2.13: 1395916734
+      nanites2.2: 1391246817
+      nanites2.3: 1257705811
+      nanites2.4: 1432920304
+      nanites2.5: -1879896014
+      nanites2.6: -1426013814
+      nanites2.7: 2113167048
+      nanites2.8: -1149864571
+      nanites2.9: -1520612601
       pillar_1: -1259165997
       pillar_2: -2100558831
       pillar_3: 1180190728
