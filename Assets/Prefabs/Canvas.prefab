@@ -404,6 +404,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  breathText: {fileID: 6562268981933296181}
+  lookAction: {fileID: -1931599278407819045, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
 --- !u!1 &7036096662913668843
 GameObject:
   m_ObjectHideFlags: 0

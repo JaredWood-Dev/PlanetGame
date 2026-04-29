@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class LocatorRotation : MonoBehaviour
 {
     public GameObject player;
-    private Vector2 diff = Vector2.right;
+    public Vector2 diff = Vector2.right;
 
     public TextMeshProUGUI breathText;
 

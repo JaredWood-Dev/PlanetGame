@@ -9,7 +9,8 @@ public class HoustonController : PlayerController
    public float breathDamage;
 
    public InputActionReference pointAction;
-   private Vector2 diff = Vector2.right;
+   public Vector2 diff = Vector2.right;
+   public LocatorRotation locatorRotationScript;
    
    public override void SpecialAbility()
    {
@@ -29,6 +30,8 @@ public class HoustonController : PlayerController
          Vector2 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
          diff = mousePos - (Vector2)transform.position;
       }
+
+      diff = locatorRotationScript.diff;
 
       var breathRay = Physics2D.Raycast(transform.position, diff.normalized, breathDistance, groundLayer);
       AbilitySystem.StartSystem();
