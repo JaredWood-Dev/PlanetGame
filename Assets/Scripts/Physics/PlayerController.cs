@@ -67,8 +67,6 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D _rb;
     private Animator _an;
     protected ParticleSystemController AbilitySystem;
-    private Collider2D _footCollider;
-    private Collider2D _bodyCollider;
 
     private AudioSource _jumpEffect;
     protected AudioSource BreathEffect;
@@ -76,6 +74,9 @@ public class PlayerController : MonoBehaviour
     private InputAction _jumpAction;
     private InputAction _moveAction;
     private InputAction _specialAbilityAction;
+    
+    public PhysicsMaterial2D footMaterial;
+    public PhysicsMaterial2D airMaterial;
 
     void Start()
     {
@@ -83,10 +84,7 @@ public class PlayerController : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
         _an = GetComponent<Animator>();
         AbilitySystem = GetComponent<ParticleSystemController>();
-        
-        _footCollider = GetComponents<Collider2D>()[0];
-        _bodyCollider = GetComponents<Collider2D>()[1];
-        
+      
         _jumpEffect = GetComponents<AudioSource>()[1];
         BreathEffect = GetComponents<AudioSource>()[0];
 
@@ -167,9 +165,9 @@ public class PlayerController : MonoBehaviour
         }
 
         Physics2D.queriesHitTriggers = false;
-        var groundCheckLeft = Physics2D.Raycast(transform.position - (0.5f * transform.right), -transform.up, groundCheckDistance, groundLayer);
-        var groundCheckRight = Physics2D.Raycast(transform.position + (0.5f * transform.right), -transform.up, groundCheckDistance, groundLayer);
-        Debug.DrawRay(transform.position - (0.5f * transform.right), -transform.up * groundCheckDistance, Color.green);
+        var groundCheckLeft = Physics2D.Raycast(transform.position - (0.4f * transform.right), -transform.up, groundCheckDistance, groundLayer);
+        var groundCheckRight = Physics2D.Raycast(transform.position + (0.4f * transform.right), -transform.up, groundCheckDistance, groundLayer);
+        Debug.DrawRay(transform.position - (0.4f * transform.right), -transform.up * groundCheckDistance, Color.green);
         if (groundCheckLeft.collider || groundCheckRight.collider)
         {
             onGround = true;
@@ -195,6 +193,7 @@ public class PlayerController : MonoBehaviour
             jumpState = KeyState.Pressed;
             if (onGround || _coyoteTimer <= coyoteTime)
             {
+                _rb.sharedMaterial = airMaterial;
                 ZeroUpwardVelocity();
                 _rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
                 _jumpEffect.Play();
@@ -229,24 +228,20 @@ public class PlayerController : MonoBehaviour
                 ZeroUpwardVelocity();
                 
                 _rb.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
-                print("jumped with " + (transform.up * jumpForce));
                 _bufferTimer = 0;
                 
                 _jumpEffect.Play();
             }
             jumpBuffered = false;
+            
+            // If we are on the ground, we need friction
+            _rb.sharedMaterial = footMaterial;
         }
-        
-        //Edge Forgiveness
-        //Whenever the player is stuck on an edge, give them a little bump to get up the edge
-        //If the foot collider and body collider are touching the same object, we are stuck on an edge.
-        List<Collider2D> footCollisions = new List<Collider2D>();
-        _footCollider.GetContacts(footCollisions);
-        
-        List<Collider2D> bodyCollisions = new List<Collider2D>();
-        _bodyCollider.GetContacts(bodyCollisions);
-
-        var similarColliders = footCollisions.Intersect(bodyCollisions);
+        else
+        {
+            // If we are in the air, no friction
+            _rb.sharedMaterial = airMaterial;
+        }
 
     }
 
@@ -269,3 +264,4 @@ public class PlayerController : MonoBehaviour
         _rb.linearVelocity = velocity;
     }
 }
+
