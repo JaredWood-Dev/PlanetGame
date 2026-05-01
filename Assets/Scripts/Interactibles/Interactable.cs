@@ -23,7 +23,7 @@ public class Interactable : MonoBehaviour
 
     void Start()
     {
-        DefaultSprite = GetComponent<SpriteRenderer>().sprite;
+        //DefaultSprite = GetComponent<SpriteRenderer>().sprite;
         
         //interactAction = InputSystem.actions.FindAction("Player/Interact");
     }
@@ -44,7 +44,7 @@ public class Interactable : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isClose = true;
-            GetComponent<SpriteRenderer>().sprite = highlight;
+            //GetComponent<SpriteRenderer>().sprite = highlight;
             player = other.gameObject;
         }
     }
@@ -54,7 +54,7 @@ public class Interactable : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isClose = false;
-            GetComponent<SpriteRenderer>().sprite = DefaultSprite;
+            //GetComponent<SpriteRenderer>().sprite = DefaultSprite;
             player = null;
         }
     }

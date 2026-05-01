@@ -1058,7 +1058,7 @@ TextureImporter:
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 2, y: 2, z: 2, w: 2}
       customData: 
       outline: []
       physicsShape: []
@@ -4665,7 +4665,7 @@ TextureImporter:
         width: 72
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4674,6 +4674,94 @@ TextureImporter:
       bones: []
       spriteID: 4a5870cff53874c4784792e3742cf649
       internalID: 415557039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Houston Portrait
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 88
+        width: 31
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1055f712495aaef41b413fb5738fed7c
+      internalID: 1345678547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dinosuar_portrait
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 88
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9f87bd1fd09ce34eb70ee91d6399e3d
+      internalID: 831974214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dialogue_box
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 8, y: 8, z: 8, w: 8}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9b9bb62bedc55145a54a1dd828e7e30
+      internalID: -2092025522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portrait_frame
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 46
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67dbdb5e271268a4e82c7da95c3b4a5e
+      internalID: 40376495
       vertices: []
       indices: 
       edges: []
@@ -4693,6 +4781,7 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       HSA_icon: 2052909967
+      Houston Portrait: 1345678547
       Level_button_hover: -1881121262
       UI_Button_Generic: 883632855
       ability_cell: -587066851
@@ -4741,12 +4830,14 @@ TextureImporter:
       concrete_platform_middle: -733105665
       concrete_platform_right: -1331132183
       conrete_bkg_1: 478563361
+      dialogue_box: -2092025522
       dino_talk: 664750572
       dino_walk_1: 1877516054
       dino_walk_2: -1768495528
       dino_walk_3: 1159504240
       dino_walk_4: 1483595642
       dinosuar: 1568327285
+      dinosuar_portrait: 831974214
       display_board: -473861731
       docking_bays_sign: 415557039
       door: -1141228138
@@ -4870,6 +4961,7 @@ TextureImporter:
       platform_middle: -1607186382
       platform_right: -1860926199
       platform_right_wall: 770012250
+      portrait_frame: 40376495
       potted_bush: 617957883
       potted_tree: -68326094
       purple: -567183502

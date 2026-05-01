@@ -7,6 +7,9 @@ public class GameManager : MonoBehaviour
     // Indicates whether the player is using a gamepad or a keyboard
     [SerializeField]
     public static bool isController = false;
+    
+    [SerializeField]
+    private PlayerInput playerInput;
 
 
     private void LateUpdate()
@@ -19,5 +22,15 @@ public class GameManager : MonoBehaviour
         keyboard = Keyboard.current.lastUpdateTime;
         isController = (gamepad > keyboard) ? true : false;
         
+    }
+
+    public void EnableUIMode()
+    {
+        playerInput.SwitchCurrentActionMap("UI");
+    }
+
+    public void EnableGameMode()
+    {
+        playerInput.SwitchCurrentActionMap("Player");
     }
 }

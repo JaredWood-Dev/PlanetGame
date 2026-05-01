@@ -90,12 +90,13 @@ public class PlayerController : MonoBehaviour
 
         _jumpAction = InputSystem.actions.FindAction("Jump");
         _moveAction = InputSystem.actions.FindAction("Move");
-        _specialAbilityAction = InputSystem.actions.FindAction("Attack");
+        _specialAbilityAction = GetComponent<PlayerInput>().actions["Attack"];
     }
 
     //Update is where the player's inputs are handled, NOT the Physics
     void Update()
     {
+        print(_specialAbilityAction);
         // Handle Left-Right Inputs
         direction = _moveAction.ReadValue<Vector2>().x;
        
@@ -115,6 +116,7 @@ public class PlayerController : MonoBehaviour
             if (abilityCoolDownTimer >= abilityCoolDown)
             {
                 abilityCoolDownTimer = 0;
+                print("breath weapon");
                 SpecialAbility();
             }
         }
