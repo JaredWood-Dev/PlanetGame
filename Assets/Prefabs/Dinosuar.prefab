@@ -15,8 +15,6 @@ GameObject:
   - component: {fileID: 7100111955940220009}
   - component: {fileID: 3233436616148797314}
   - component: {fileID: 3041201973851481454}
-  - component: {fileID: 6384844321562365816}
-  - component: {fileID: 2721443555934743425}
   m_Layer: 9
   m_Name: Dinosuar
   m_TagString: Untagged
@@ -36,7 +34,8 @@ Transform:
   m_LocalPosition: {x: 43.14, y: -2.02, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 3270125301475474119}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &9221913991372612356
@@ -62,7 +61,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -214,38 +213,46 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &6384844321562365816
-MonoBehaviour:
+--- !u!1 &4055624687019031916
+GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2241461389129149525}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00c079967b4a4664781bd76a53606a19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  highlight: {fileID: 1568327285, guid: c16b6624a8739d246a60f004c2626f43, type: 3}
-  isClose: 1
-  interactAction: {fileID: 1781555164194001046, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
-  dialogue:
-    Sentences:
-    - CurrentSpeaker: {fileID: 11400000, guid: 3938c4cd391b64446b605f33007408cc, type: 2}
-      Sentence: Are you worried for the upcoming director election?
-    - CurrentSpeaker: {fileID: 11400000, guid: 0cbb8908e33b9a64a84fe91311a7fc67, type: 2}
-      Sentence: A little, but I have faith that If I'm not reelected, the next person
-        will uphold the ideals of Horizon.
-    - CurrentSpeaker: {fileID: 11400000, guid: 3938c4cd391b64446b605f33007408cc, type: 2}
-      Sentence: Well, you have my vote. You've sacraficed so much for Horizon, and
-        yet you still look at the night sky with a child-like wonder.
---- !u!61 &2721443555934743425
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3270125301475474119}
+  - component: {fileID: 4471171090532444506}
+  - component: {fileID: 5071502451995538133}
+  m_Layer: 0
+  m_Name: Trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3270125301475474119
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4055624687019031916}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1372981432821922487}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &4471171090532444506
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2241461389129149525}
+  m_GameObject: {fileID: 4055624687019031916}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -285,3 +292,28 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 6.605522, y: 4.568519}
   m_EdgeRadius: 0
+--- !u!114 &5071502451995538133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4055624687019031916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00c079967b4a4664781bd76a53606a19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlight: {fileID: 1568327285, guid: c16b6624a8739d246a60f004c2626f43, type: 3}
+  isClose: 1
+  interactAction: {fileID: 1781555164194001046, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  dialogue:
+    Sentences:
+    - CurrentSpeaker: {fileID: 11400000, guid: 3938c4cd391b64446b605f33007408cc, type: 2}
+      Sentence: Are you worried for the upcoming director election?
+    - CurrentSpeaker: {fileID: 11400000, guid: 0cbb8908e33b9a64a84fe91311a7fc67, type: 2}
+      Sentence: A little, but I have faith that If I'm not reelected, the next person
+        will uphold the ideals of Horizon.
+    - CurrentSpeaker: {fileID: 11400000, guid: 3938c4cd391b64446b605f33007408cc, type: 2}
+      Sentence: Well, you have my vote. You've sacraficed so much for Horizon, and
+        yet you still look at the night sky with a child-like wonder.

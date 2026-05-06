@@ -21,6 +21,8 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
+        _dialogueSegments.Clear();
+        
         dialogueBox.SetActive(true);
         foreach (var sentance in dialogue.Sentences)
         {
