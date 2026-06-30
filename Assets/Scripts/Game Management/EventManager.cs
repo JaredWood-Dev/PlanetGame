@@ -6,6 +6,8 @@ public class EventManager : MonoBehaviour
     public static event Action<GameObject, GameObject, int> OnArmorHit;
     public static event Action<int> OnArmorUpdate;
 
+    public static event Action<Vector2> OnCheckPointUpdate;
+
     public static void ArmorHit(GameObject target, GameObject attacker, int damage)
     {
         OnArmorHit?.Invoke(target, attacker, damage);
@@ -15,4 +17,10 @@ public class EventManager : MonoBehaviour
     {
         OnArmorUpdate?.Invoke(totalSlots);
     }
+
+    public static void CheckPointUpdate(Vector2 position)
+    {
+        OnCheckPointUpdate?.Invoke(position);
+    }
+    
 }

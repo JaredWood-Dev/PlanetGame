@@ -4775,7 +4775,7 @@ TextureImporter:
         width: 110
         height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4784,6 +4784,72 @@ TextureImporter:
       bones: []
       spriteID: 34efcab550a24ab4bb0406bd20b3920c
       internalID: -1822225585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: checkpoint_unactive
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 560
+        width: 24
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d1e4df7a934f704a86f3436a06c9bc8
+      internalID: 124126904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: checkpoint_active_1
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 536
+        width: 24
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa700a6d0d0129f4da736e8304c19cad
+      internalID: -2139515653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: checkpoint_active_2
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 512
+        width: 24
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cde50e55f47655c45988809fff8117db
+      internalID: -1478083563
       vertices: []
       indices: 
       edges: []
@@ -4825,6 +4891,9 @@ TextureImporter:
       bed: 980091628
       breath_ability: -792599522
       breath_direction: -1022859878
+      checkpoint_active_1: -2139515653
+      checkpoint_active_2: -1478083563
+      checkpoint_unactive: 124126904
       concrete_1: 1086243287
       concrete_10: -1905849184
       concrete_11: -936032487
