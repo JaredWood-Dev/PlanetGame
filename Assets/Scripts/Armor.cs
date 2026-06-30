@@ -30,6 +30,9 @@ public class Armor : MonoBehaviour
     [Header("Sound Effects")]
     public AudioClip hitSound;
     private AudioSource _hitSource;
+    
+    [Header("Particle Effects")]
+    public ParticleSystemController hitParticle;
 
     void Start()
     {
@@ -44,6 +47,8 @@ public class Armor : MonoBehaviour
     public void Hit(int damage, GameObject attacker = null, Vector2 knockback = new Vector2())
     {
         GetComponent<Renderer>().material = flashMaterial;
+        
+        if (hitParticle) hitParticle.StartSystem();
 
         if (_hitSource)
         {

@@ -4766,6 +4766,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: houston_ship
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 445
+        width: 110
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34efcab550a24ab4bb0406bd20b3920c
+      internalID: -1822225585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -4884,6 +4906,7 @@ TextureImporter:
       houston_run_5: 5810594165373147394
       houston_run_6: -284876861174309579
       houston_run_7: -3895683444878920944
+      houston_ship: -1822225585
       ionizing_radiation_icon: 1551057641
       left_arrow: -1472320027
       level_button: 52398970
