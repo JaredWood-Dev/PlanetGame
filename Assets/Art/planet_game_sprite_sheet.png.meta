@@ -4797,7 +4797,7 @@ TextureImporter:
         width: 24
         height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4819,7 +4819,7 @@ TextureImporter:
         width: 24
         height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4841,7 +4841,7 @@ TextureImporter:
         width: 24
         height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4850,6 +4850,28 @@ TextureImporter:
       bones: []
       spriteID: cde50e55f47655c45988809fff8117db
       internalID: -1478083563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spaceship_icon
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 34
+        width: 6
+        height: 3
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a1ef114fd91d3d47a4e4cb409e1a565
+      internalID: -77669026
       vertices: []
       indices: 
       edges: []
@@ -5063,6 +5085,7 @@ TextureImporter:
       runestone_highlighted: -622025325
       small_planet: 2027663669
       space_poster: 1222009367
+      spaceship_icon: -77669026
       starbit: -437192302
       stone_brick_1: 1646193727
       stone_brick_2: 319708572

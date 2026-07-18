@@ -49,10 +49,11 @@ public class HorizonAttackTrigger : ZoneTrigger
         
         for (int i = 0; i < canvas.transform.childCount; i++)
         {
-            if (canvas.transform.GetChild(i).name != "Overlay")
+            if (canvas.transform.GetChild(i).name != "Overlay" || canvas.transform.GetChild(i).name != "EscapeCutscene")
                 canvas.transform.GetChild(i).gameObject.SetActive(true);
         }
 
+        canvas.transform.GetChild(0).gameObject.SetActive(false);
         dialogueBox.SetActive(false);
         
         backgroundObject.GetComponent<SpriteRenderer>().sprite = attackBackground;

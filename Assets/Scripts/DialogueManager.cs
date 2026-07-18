@@ -11,6 +11,7 @@ public class DialogueManager : MonoBehaviour
     public TMP_Text dialogueText;
     public Image speakerImage;
     public Image speakerFrame;
+    public UnityEngine.UI.Button speakerButton;
     
     private Queue<DialogueSegment> _dialogueSegments;
 
@@ -29,7 +30,8 @@ public class DialogueManager : MonoBehaviour
         {
             _dialogueSegments.Enqueue(sentance);
         }
-        
+
+        speakerButton.Select();
         FindFirstObjectByType<GameManager>().EnableUIMode();
         Time.timeScale = 0;
         NextSentence();
