@@ -10,6 +10,7 @@ public class DialogueManager : MonoBehaviour
     public TMP_Text nameText;
     public TMP_Text dialogueText;
     public Image speakerImage;
+    public Image speakerFrame;
     
     private Queue<DialogueSegment> _dialogueSegments;
 
@@ -45,8 +46,22 @@ public class DialogueManager : MonoBehaviour
         DialogueSegment sentence = _dialogueSegments.Dequeue();
         print(sentence.CurrentSpeaker + " said: " + sentence.Sentence);
 
-        nameText.text = sentence.CurrentSpeaker.Name;
-        speakerImage.sprite = sentence.CurrentSpeaker.Portrait;
+        if (sentence.displaySpeaker)
+        {
+            speakerFrame.gameObject.SetActive(true);
+            nameText.gameObject.SetActive(true);
+            speakerImage.gameObject.SetActive(true);
+            nameText.text = sentence.CurrentSpeaker.Name;
+            speakerImage.sprite = sentence.CurrentSpeaker.Portrait;
+        }
+        else
+        {
+            speakerFrame.gameObject.SetActive(false);
+            nameText.gameObject.SetActive(false);
+            speakerImage.gameObject.SetActive(false);
+        }
+        
+        
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence.Sentence));
 

@@ -8,6 +8,8 @@ public class HorizonAttackTrigger : ZoneTrigger
     public GameObject backgroundObject;
     public Image overlay;
     public Checkpoint autoCheckpoint;
+    public GameObject dialogueBox;
+    public GameObject canvas;
     
     public override void OnTriggerEnter2D(Collider2D other)
     {
@@ -32,6 +34,26 @@ public class HorizonAttackTrigger : ZoneTrigger
         }
        
         yield return new WaitForSeconds(0.5f);
+        
+        for (int i = 0; i < canvas.transform.childCount; i++)
+        {
+            if (canvas.transform.GetChild(i).name != "Overlay")
+                canvas.transform.GetChild(i).gameObject.SetActive(false);
+        }
+
+        dialogueBox.SetActive(true);
+        
+        GetComponent<AutoDialogue>().TriggerDialogue();
+        
+        yield return new WaitUntil(() => !dialogueBox.activeSelf);
+        
+        for (int i = 0; i < canvas.transform.childCount; i++)
+        {
+            if (canvas.transform.GetChild(i).name != "Overlay")
+                canvas.transform.GetChild(i).gameObject.SetActive(true);
+        }
+
+        dialogueBox.SetActive(false);
         
         backgroundObject.GetComponent<SpriteRenderer>().sprite = attackBackground;
         
