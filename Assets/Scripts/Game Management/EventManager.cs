@@ -7,6 +7,8 @@ public class EventManager : MonoBehaviour
     public static event Action<int> OnArmorUpdate;
 
     public static event Action<Vector2> OnCheckPointUpdate;
+    
+    public static event Action OnPlayerDeath;
 
     public static void ArmorHit(GameObject target, GameObject attacker, int damage)
     {
@@ -21,6 +23,11 @@ public class EventManager : MonoBehaviour
     public static void CheckPointUpdate(Vector2 position)
     {
         OnCheckPointUpdate?.Invoke(position);
+    }
+
+    public static void PlayerDeath()
+    {
+        OnPlayerDeath?.Invoke();
     }
     
 }

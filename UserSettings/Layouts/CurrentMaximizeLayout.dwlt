@@ -243,7 +243,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
+      scrollPos: {x: 0, y: 215}
       m_SelectedIDs: 
       m_LastClickedID: 0
       m_ExpandedIDs: 0cfbffff
@@ -893,9 +893,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 184.0542, y: 47.474205, z: -1.149517}
+    m_Target: {x: 296.07434, y: 22.913774, z: -0.21895026}
     speed: 2
-    m_Value: {x: 184.0542, y: 47.474205, z: -1.149517}
+    m_Value: {x: 296.07434, y: 22.913774, z: -0.21895026}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -945,9 +945,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 116.20559
+    m_Target: 23.148146
     speed: 2
-    m_Value: 116.20559
+    m_Value: 23.148146
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1105,7 +1105,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -316606
+  m_LastSelectedObjectID: 47176
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1116,7 +1116,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -1125,16 +1125,16 @@ MonoBehaviour:
     y: 352.8
     width: 1056
     height: 372
-  m_MinSize: {x: 231, y: 276}
-  m_MaxSize: {x: 10001, y: 10026}
-  m_ActualView: {fileID: 12}
+  m_MinSize: {x: 101, y: 126}
+  m_MaxSize: {x: 4001, y: 4026}
+  m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 12}
   - {fileID: 13}
   - {fileID: 14}
   - {fileID: 15}
-  m_Selected: 0
-  m_LastSelected: 3
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1182,7 +1182,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Art
+    - Assets/Scripts/Interactibles
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1192,16 +1192,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Art
+  - Assets/Scripts/Interactibles
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\jster\GameDevelopment\PlanetGame
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: d0c10000
-    m_LastClickedID: 49616
-    m_ExpandedIDs: 000000005ec0000060c0000062c0000064c0000066c0000068c0000000ca9a3b
+    m_SelectedIDs: a6cf0000
+    m_LastClickedID: 53158
+    m_ExpandedIDs: 000000007ac000007cc000007ec0000080c0000082c0000084c00000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1230,7 +1230,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000005ec0000060c0000062c0000064c0000066c0000068c0000000ca9a3b
+    m_ExpandedIDs: 000000007ac000007cc000007ec0000080c0000082c0000084c00000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1256,10 +1256,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: c6230000f8b60000e0c300005ab600000eba00009ab60000c6b70000eeb7000010ba0000a8b90000e4b9000050bc0000d4ba000056b700005ab70000c4b60000c4b70000dcb70000f4cc000054ba0000a4b7000012b9000064ba000072bb0000ecc800008cbc0000427b0200767c020084bc0000
+    m_SelectedInstanceIDs: 92ddffff
+    m_LastClickedInstanceID: -8814
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: c6230000f8b60000e0c300005ab600000eba00009ab60000c6b70000eeb7000010ba0000a8b90000e4b9000050bc0000d4ba000056b700005ab70000c4b60000c4b70000dcb70000f4cc000054ba0000a4b7000012b9000064ba000072bb0000ecc800008cbc0000427b0200767c020084bc000034040000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

@@ -96,7 +96,7 @@ public class PlayerController : MonoBehaviour
     //Update is where the player's inputs are handled, NOT the Physics
     void Update()
     {
-        print(_specialAbilityAction);
+     
         // Handle Left-Right Inputs
         direction = _moveAction.ReadValue<Vector2>().x;
        
@@ -116,7 +116,6 @@ public class PlayerController : MonoBehaviour
             if (abilityCoolDownTimer >= abilityCoolDown)
             {
                 abilityCoolDownTimer = 0;
-                print("breath weapon");
                 SpecialAbility();
             }
         }

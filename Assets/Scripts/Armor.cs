@@ -62,6 +62,7 @@ public class Armor : MonoBehaviour
         {
             //Creature dies    
             DestroyCreature();
+            Invoke(nameof(ResetMaterial), 0.1f);
             return;
         }
         
@@ -91,12 +92,12 @@ public class Armor : MonoBehaviour
         EventManager.ArmorHit(gameObject, gameObject, currentArmorSlots);
     }
 
-    void DestroyCreature()
+    public void DestroyCreature()
     {
         if (gameObject.CompareTag("Player"))
         {
             //Game Over!
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            EventManager.PlayerDeath();
         }
         else
         {

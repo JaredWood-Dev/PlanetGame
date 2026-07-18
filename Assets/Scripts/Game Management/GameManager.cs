@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -10,6 +11,9 @@ public class GameManager : MonoBehaviour
     
     [SerializeField]
     private PlayerInput playerInput;
+
+    public Vector2 checkpointPosition;
+    public GameObject player;
 
 
     private void LateUpdate()
@@ -32,5 +36,28 @@ public class GameManager : MonoBehaviour
     public void EnableGameMode()
     {
         playerInput.SwitchCurrentActionMap("Player");
+    }
+
+    public void ResetToCheckpoint()
+    {
+        player.transform.position = checkpointPosition;
+        player.GetComponent<Armor>().RestoreArmor(100);
+    }
+
+    public void UpdateCheckpoint(Vector2 position)
+    {
+        checkpointPosition = position;
+    }
+
+    void OnEnable()
+    {
+        EventManager.OnPlayerDeath += ResetToCheckpoint;
+        EventManager.OnCheckPointUpdate += UpdateCheckpoint;
+    }
+
+    void OnDisable()
+    {
+        EventManager.OnPlayerDeath -= ResetToCheckpoint;
+        EventManager.OnCheckPointUpdate -= UpdateCheckpoint;
     }
 }

@@ -7,12 +7,15 @@ public class HorizonAttackTrigger : ZoneTrigger
     public Sprite attackBackground;
     public GameObject backgroundObject;
     public Image overlay;
+    public Checkpoint autoCheckpoint;
     
     public override void OnTriggerEnter2D(Collider2D other)
     {
         base.OnTriggerEnter2D(other);
         
         FindFirstObjectByType<GameManager>().EnableUIMode();
+        
+        autoCheckpoint.Interact();
 
         StartCoroutine(DoFade(0, 1, 1));
     }
