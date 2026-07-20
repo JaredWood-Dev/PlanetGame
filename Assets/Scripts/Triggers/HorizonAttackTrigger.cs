@@ -10,6 +10,8 @@ public class HorizonAttackTrigger : ZoneTrigger
     public Checkpoint autoCheckpoint;
     public GameObject dialogueBox;
     public GameObject canvas;
+    public MusicPlayer music;
+    public AudioClip attackMusic;
     
     public override void OnTriggerEnter2D(Collider2D other)
     {
@@ -20,6 +22,8 @@ public class HorizonAttackTrigger : ZoneTrigger
         autoCheckpoint.Interact();
 
         StartCoroutine(DoFade(0, 1, 1));
+        
+        music.StopPlaying();
     }
 
     IEnumerator DoFade(float start, float end, float duration)
@@ -55,6 +59,9 @@ public class HorizonAttackTrigger : ZoneTrigger
 
         canvas.transform.GetChild(0).gameObject.SetActive(false);
         dialogueBox.SetActive(false);
+        
+        music.QueueSong(attackMusic, true);
+        music.StartPlaying();
         
         backgroundObject.GetComponent<SpriteRenderer>().sprite = attackBackground;
         

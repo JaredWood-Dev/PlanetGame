@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
 
     public void ResetToCheckpoint()
     {
-        player.transform.position = checkpointPosition;
+        player.transform.position = new Vector3(checkpointPosition.x, checkpointPosition.y, -1);
         player.GetComponent<Armor>().RestoreArmor(100);
     }
 
