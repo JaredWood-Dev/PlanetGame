@@ -6,10 +6,14 @@ public class Collectible : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        print("Trigger Collided");
         if (other.CompareTag("Player"))
         {
-            Destroy(gameObject.transform.parent.gameObject);
+           Collect();
         }
+    }
+
+    public virtual void Collect()
+    {
+        Destroy(gameObject.transform.parent.gameObject);
     }
 }
