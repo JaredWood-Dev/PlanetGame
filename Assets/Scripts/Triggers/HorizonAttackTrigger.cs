@@ -12,7 +12,8 @@ public class HorizonAttackTrigger : ZoneTrigger
     public GameObject canvas;
     public MusicPlayer music;
     public AudioClip attackMusic;
-    
+    public Fade fade;
+
     public override void OnTriggerEnter2D(Collider2D other)
     {
         base.OnTriggerEnter2D(other);
@@ -21,29 +22,16 @@ public class HorizonAttackTrigger : ZoneTrigger
         
         autoCheckpoint.Interact();
 
-        StartCoroutine(DoFade(0, 1, 1));
-        
+        StartCoroutine(HorizonAttack());
+
         music.StopPlaying();
     }
 
-    IEnumerator DoFade(float start, float end, float duration)
+    IEnumerator HorizonAttack()
     {
-        float counter = 0f;
-        while (counter < duration)
-        {
-            counter += Time.deltaTime;
-            float alpha = Mathf.Lerp(start, end, counter / duration);
-            overlay.color = new Color(0, 0, 0, alpha);
-            yield return null;
-        }
-       
-        yield return new WaitForSeconds(0.5f);
-        
-        for (int i = 0; i < canvas.transform.childCount; i++)
-        {
-            if (canvas.transform.GetChild(i).name != "Overlay")
-                canvas.transform.GetChild(i).gameObject.SetActive(false);
-        }
+        StartCoroutine(fade.DoFade(0, 1, 1));
+
+        yield return new WaitForSeconds(1);
 
         dialogueBox.SetActive(true);
         
@@ -65,7 +53,9 @@ public class HorizonAttackTrigger : ZoneTrigger
         
         backgroundObject.GetComponent<SpriteRenderer>().sprite = attackBackground;
         
+        StartCoroutine(fade.DoFade(1, 0, 1));
+        
         FindFirstObjectByType<GameManager>().EnableGameMode();
-        overlay.color = new Color(1, 1, 1, 0);
+        //overlay.color = new Color(1, 1, 1, 0);
     }
 }
