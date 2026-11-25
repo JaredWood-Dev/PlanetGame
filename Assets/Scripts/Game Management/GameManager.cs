@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -14,6 +15,8 @@ public class GameManager : MonoBehaviour
 
     public Vector2 checkpointPosition;
     public GameObject player;
+    public int starbits;
+    public TMP_Text starbitCounter;
 
 
     private void LateUpdate()

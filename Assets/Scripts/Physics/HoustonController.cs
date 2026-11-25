@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -29,9 +30,9 @@ public class HoustonController : PlayerController
          //Mouse Implementation
          Vector2 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
          diff = mousePos - (Vector2)transform.position;
+         print("Mouse: " + mousePos);
+         print("Player: " + transform.position);
       }
-
-      diff = locatorRotationScript.diff;
 
       var breathRay = Physics2D.Raycast(transform.position, diff.normalized, breathDistance, groundLayer);
       AbilitySystem.StartSystem();
@@ -41,5 +42,7 @@ public class HoustonController : PlayerController
          gameObject.GetComponent<Rigidbody2D>().AddForce(-diff.normalized * (breathForce), ForceMode2D.Impulse);
          BreathEffect.Play();
       }
+      
+      print(MathFunctions.VectorToDegrees(diff));
    }
 }

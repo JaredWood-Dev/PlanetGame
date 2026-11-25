@@ -152,8 +152,8 @@ GameObject:
   m_Component:
   - component: {fileID: 694599713425093787}
   - component: {fileID: 6040812835945281640}
-  - component: {fileID: 4771525618710696363}
   - component: {fileID: 1047015474875705862}
+  - component: {fileID: 6946398717190468710}
   m_Layer: 0
   m_Name: Starbit GFX
   m_TagString: Untagged
@@ -231,18 +231,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4771525618710696363
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8624365837737800095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21a37bf039c19324580e1039ea619925, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!58 &1047015474875705862
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -279,3 +267,16 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.4375
+--- !u!114 &6946398717190468710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8624365837737800095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f37cfd4c9c1b499ba0e00ceae909f76f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  starbitCounter: {fileID: 0}
