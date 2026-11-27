@@ -401,6 +401,19 @@ MonoBehaviour:
     FrequencyGain: 1
     Duration: 1
     m_NoiseOffsets: {x: 0, y: 0, z: 0}
+--- !u!114 &49187182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 49187172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0809539b373efe847a2bdd865d46aa89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraFunctions
+  cameraFOV: 10
 --- !u!4 &57508840 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7968956947676904246, guid: 67bf581093e6de94ea7d42eae9b85453, type: 3}
@@ -820,11 +833,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4373742613433426486, guid: 8b71b0a0b2a852345badd37d49748379, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 241.73
+      value: 0.24
       objectReference: {fileID: 0}
     - target: {fileID: 4373742613433426486, guid: 8b71b0a0b2a852345badd37d49748379, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 20.25
+      value: -1.6
       objectReference: {fileID: 0}
     - target: {fileID: 4373742613433426486, guid: 8b71b0a0b2a852345badd37d49748379, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7440,6 +7453,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5071502451995538133, guid: 3dd9cec3c460d0747814bf9860be3b02, type: 3}
+      propertyPath: cameraFunctions
+      value: 
+      objectReference: {fileID: 49187182}
+    - target: {fileID: 5071502451995538133, guid: 3dd9cec3c460d0747814bf9860be3b02, type: 3}
       propertyPath: dialogue.Sentences.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -8201,11 +8218,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4506824457044134861, guid: 4407a1d6e542f3d44abbea21f9f1260d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 241.73
+      value: 0.24
       objectReference: {fileID: 0}
     - target: {fileID: 4506824457044134861, guid: 4407a1d6e542f3d44abbea21f9f1260d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 20.25
+      value: -1.6
       objectReference: {fileID: 0}
     - target: {fileID: 4506824457044134861, guid: 4407a1d6e542f3d44abbea21f9f1260d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8240,6 +8257,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6549823911958527232, guid: 4407a1d6e542f3d44abbea21f9f1260d, type: 3}
+      propertyPath: Lens.OrthographicSize
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6549823911958527232, guid: 4407a1d6e542f3d44abbea21f9f1260d, type: 3}
       propertyPath: Target.TrackingTarget
       value: 
       objectReference: {fileID: 2081552872}
@@ -8250,6 +8271,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4024208817500280798, guid: 4407a1d6e542f3d44abbea21f9f1260d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 49187177}
+    - targetCorrespondingSourceObject: {fileID: 4024208817500280798, guid: 4407a1d6e542f3d44abbea21f9f1260d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 49187182}
   m_SourcePrefab: {fileID: 100100000, guid: 4407a1d6e542f3d44abbea21f9f1260d, type: 3}
 --- !u!4 &401558888 stripped
 Transform:
@@ -19325,6 +19349,10 @@ PrefabInstance:
       propertyPath: isClose
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5071502451995538133, guid: 3dd9cec3c460d0747814bf9860be3b02, type: 3}
+      propertyPath: cameraFunctions
+      value: 
+      objectReference: {fileID: 49187182}
     - target: {fileID: 5071502451995538133, guid: 3dd9cec3c460d0747814bf9860be3b02, type: 3}
       propertyPath: dialogue.Sentences.Array.size
       value: 1
@@ -124919,6 +124947,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5071502451995538133, guid: 3dd9cec3c460d0747814bf9860be3b02, type: 3}
+      propertyPath: cameraFunctions
+      value: 
+      objectReference: {fileID: 49187182}
+    - target: {fileID: 5071502451995538133, guid: 3dd9cec3c460d0747814bf9860be3b02, type: 3}
       propertyPath: dialogue.Sentences.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -125833,7 +125865,7 @@ Transform:
   m_GameObject: {fileID: 1876723426}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 241.73, y: 20.25, z: -11}
+  m_LocalPosition: {x: 0.24, y: -1.6, z: -11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -125854,11 +125886,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3565573889454054707, guid: dbaf9e5259354854184d72253280bb0e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 241.73
+      value: 0.24
       objectReference: {fileID: 0}
     - target: {fileID: 3565573889454054707, guid: dbaf9e5259354854184d72253280bb0e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 20.25
+      value: -1.6
       objectReference: {fileID: 0}
     - target: {fileID: 3565573889454054707, guid: dbaf9e5259354854184d72253280bb0e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -125891,6 +125923,14 @@ PrefabInstance:
     - target: {fileID: 3565573889454054707, guid: dbaf9e5259354854184d72253280bb0e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6659332118474195171, guid: dbaf9e5259354854184d72253280bb0e, type: 3}
+      propertyPath: field of view
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 6659332118474195171, guid: dbaf9e5259354854184d72253280bb0e, type: 3}
+      propertyPath: orthographic size
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7855273012669858885, guid: dbaf9e5259354854184d72253280bb0e, type: 3}
       propertyPath: m_Name
@@ -128858,6 +128898,10 @@ PrefabInstance:
       propertyPath: isClose
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5071502451995538133, guid: 3dd9cec3c460d0747814bf9860be3b02, type: 3}
+      propertyPath: cameraFunctions
+      value: 
+      objectReference: {fileID: 49187182}
     - target: {fileID: 5071502451995538133, guid: 3dd9cec3c460d0747814bf9860be3b02, type: 3}
       propertyPath: dialogue.Sentences.Array.data[0].displaySpeaker
       value: 1
